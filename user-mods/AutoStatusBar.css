@@ -1,0 +1,34 @@
+/* automate status bar */
+.toolbar-statusbar {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9;
+	height: 26px;
+	width: auto;
+	padding-top: 2px;
+	border-radius: var(--radius);
+	border: none;
+	transition: 0.15s 0s !important;
+}
+.toolbar-statusbar:not(:focus-within):not(:hover) {
+	height: 12px;
+	background: transparent !important;
+	transition: 0.15s 0.4s !important;
+}
+.toolbar-statusbar:not(:focus-within):not(:hover) :not(.status-info) {
+	opacity: 0;
+	transition: opacity 0s 0.55s !important;
+}
+.status-info.visible {
+	visibility: visible;
+}
+.status-info {
+	position: fixed;
+	left: 0;
+	bottom: 1px;
+	padding: 1.5px 8px 2px;
+	border-radius: 0 var(--radius) 0 0;
+	background: var(--colorBgDark);
+	visibility: hidden;
+}

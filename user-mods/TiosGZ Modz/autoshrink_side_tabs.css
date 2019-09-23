@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+#tabs-container.left:not(:hover),
+#tabs-container.right:not(:hover) {
+	width: 30px !important;
+}
+/*
+#tabs-container.left, #tabs-container.right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+*/
+#tabs-container.left {
+	left: 0;
+}
+#tabs-container.right {
+	right: 0;
+}
+/* ! Panels adjustment */
+/* ? Not sure how I should do this UI-wise... */
+/*
+#panels-container.right.button.switcher:not([style="width: 4px;"])
+	~ #tabs-container.right {
+	right: 4px;
+}
+#panels-container.left.button.switcher:not([style="width: 4px;"])
+	~ #tabs-container.left {
+	left: 4px;
+}
+*/
+/*
+#browser.tabs-left #webview-container {
+	margin-left: 30px;
+}
+#browser.tabs-right #webview-container {
+	margin-right: 30px;
+}
+*/
+#tabs-container.left .tab-strip::-webkit-scrollbar,
+#tabs-container.right .tab-strip::-webkit-scrollbar {
+	width: 5px;
+}

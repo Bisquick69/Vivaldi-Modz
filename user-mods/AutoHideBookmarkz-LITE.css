@@ -1,0 +1,101 @@
+/*Auto hide bookmark bar*/
+/* .toolbar,
+#header {
+	z-index: 3;
+} */
+
+#header {
+	background: none !important;
+	pointer-events: none !important;
+}
+
+.bookmark-bar {
+	position: fixed !important;
+	width: 100%;
+	transform: translateY(-100%);
+	transition: transform 0.45s !important;
+	z-index: 2;
+}
+
+/* ! 9-23-19 Added :-webkit-any(.native, .maximized)#browser:not(.tabs-top) to clarify not tabs-left/right */
+
+:-webkit-any(.native, .maximized)#browser.tabs-left .bookmark-bar:hover {
+	transform: translateY(205%); /*! or 34 px | WAS 125%*/
+}
+
+:-webkit-any(.native, .maximized)#browser.tabs-top .bookmark-bar:hover {
+	transform: translateY(145%); /*! or 34 px | WAS 125%*/
+}
+
+.toolbar-addressbar + .bookmark-bar:hover .toolbar-addressbar {
+	opacity: 1 !important;
+	top: 30px !important;
+	transform: translateY(80%);
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important; /* ? Adding background for accent color transition */
+}
+
+#browser.tabs-top .toolbar:hover ~ .bookmark-bar {
+	transform: translateY(145%);
+}
+
+#browser.tabs-left .toolbar:hover ~ .bookmark-bar {
+	transform: translateY(205%);
+}
+
+#browser.win.maximized
+	#header:not(.window-buttongroup):hover
+	~ #main
+	.toolbar-addressbar {
+	transform: translateY(80%);
+	opacity: 1 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+	padding-top: 4px;
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important; /* ? Adding background for accent color transition */
+}
+
+#browser.win.maximized
+	#header:hover
+	> #tabsContainer:hover
+	.toolbar-addressbar {
+	top: 30px !important;
+	margin-top: 0;
+	transform: translateY(130%);
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important; /* ? Adding background for accent color transition */
+}
+
+#browser.win.normal
+	#header:not(.window-buttongroup):hover
+	~ #main
+	.toolbar-addressbar {
+	transform: translateY(95%);
+	opacity: 1 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+}
+
+/* #header:not(.window-buttongroup):hover ~ #main .toolbar-addressbar {
+	transform: translateY(80%);
+	opacity: 1 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+} */
+
+/* #header:hover ~ #main .bookmark-bar {
+	transform: translateY(125%);
+} */
+
+.bookmark-bar button:hover:not(span) {
+	transform: scale(1.25);
+	z-index: 1;
+}
+
+.OmniDropdown {
+	margin-top: 32px !important;
+	z-index: 1 !important;
+	transition: visibility 1s;
+}
+
+.webpanel-header {
+	z-index: 0;
+}

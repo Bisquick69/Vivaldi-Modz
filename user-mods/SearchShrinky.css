@@ -1,0 +1,37 @@
+@keyframes Xpand {
+	0% {
+		transform: width(26px);
+	}
+	50% {
+		transform: width(75px);
+	}
+	100% {
+		transform: width(175px);
+	}
+}
+
+/* ! A. Always shrink it regardless of window size: */
+
+.toolbar-addressbar .searchfield:not(:focus-within):not(:hover) {
+	max-width: 26px;
+	display: unset;
+	overflow: hidden;
+	transition: transform 1.69s ease 1.69s;
+}
+
+/* ! B. Only shrink it in normal window, cuz space is abundant when maximized: */
+
+#browser:not(.maximized)
+	.toolbar-addressbar
+	.searchfield:not(:focus-within):not(:hover) {
+	max-width: 26px;
+	display: unset;
+	overflow: hidden;
+	transition: transform 1.69s ease 1.69s;
+}
+
+.searchfield:hover {
+	transition: transform 1.69s ease 1.69s;
+	transition-delay: 690ms;
+	transform: max-width(175px);
+}

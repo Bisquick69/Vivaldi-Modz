@@ -1,0 +1,22 @@
+#browser.tabs-top .tab:not(.active):hover {
+	transform: translateY(0);
+	transition: transform 0.69ms !important;
+}
+#browser.tabs-top .tab:not(.active) {
+	transform: translateY(-4px);
+	transition: transform 0.69s ease-in-out !important;
+}
+
+#browser.tabs-left .tab:not(.active):hover,
+#browser.tabs-right .tab:not(.active):hover {
+	transform: translateX(0);
+	transition: transform 0.69ms !important;
+}
+#browser.tabs-left .tab:not(.active) {
+	transform: translateX(-2px);
+	transition: transform 0.69s ease-in-out !important;
+}
+#browser.tabs-right .tab:not(.active) {
+	transform: translateX(4px);
+	transition: transform 0.69s ease-in-out !important;
+}
