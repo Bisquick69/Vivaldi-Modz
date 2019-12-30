@@ -14,7 +14,8 @@
 
 .toolbar-addressbar .searchfield:not(:focus-within):not(:hover) {
 	max-width: 26px;
-	display: unset;
+	min-width: 26px !important;
+	/* display: unset; */
 	overflow: hidden;
 	transition: transform 1.69s ease 1.69s;
 }
@@ -25,13 +26,14 @@
 	.toolbar-addressbar
 	.searchfield:not(:focus-within):not(:hover) {
 	max-width: 26px;
-	display: unset;
+	min-width: 26px !important;
+	/* display: unset; */
 	overflow: hidden;
 	transition: transform 1.69s ease 1.69s;
 }
 
 .searchfield:hover {
 	transition: transform 1.69s ease 1.69s;
-	transition-delay: 690ms;
+	transition-delay: 6900ms;
 	transform: max-width(175px);
 }

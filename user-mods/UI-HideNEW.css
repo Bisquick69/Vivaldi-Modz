@@ -192,17 +192,32 @@
 	animation-duration: 5000ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	border-color: var(--colorAccentBGDarker);
+	color: var(--colorAccentBGDarker) !important;
+	border-color: var(--colorAccentBGDarker) !important;
+	outline-color: var(--colorAccentBGDarker) !important;
+	border-radius: 25px !important;
+	transition: all 1.69s linear;
+}
+
+.button-toolbar.newtab:hover svg {
+	scale: 1.25;
+	filter: brightness(1.5);
 }
 
 .tab.tab.tab:not(.active) .tab-header:hover {
 	background-color: var(--colorAccentBg);
 	opacity: 1;
-	transition: background-color 1.69s, color 1.69s, border-color 1.69s;
+	/* transition: background-color 1.69s, color 1.69s, border-color 1.69s; */
+	transition: all 1.69s linear;
 	animation-name: pulse;
 	animation-duration: 1.69s;
 	animation-iteration-count: infinite;
 	z-index: 11 !important;
+	/* ? 12-10-19 | In conjunction with line 387 | ACTTAB-HIGHLIGHT */
+	border-bottom-style: inherit !important;
+	border-right-style: inherit !important;
+	border-left-style: inherit !important;
+	border-color: inherit !important;
 }
 
 .tab-header {
@@ -364,15 +379,51 @@
 }
 
 /* ! NEW - attempt to fade background tabs moar */
+/*
 .tab.tab.tab:not(.active) .tab-header:not(:hover) {
 	filter: contrast(0.69) saturate(0) grayscale(45%) !important;
 }
-
+*/
 .tab-strip:hover .tab.tab.tab:not(.active):not(:hover) {
 	filter: contrast(0.69) saturate(1) grayscale(45%) blur(0.69px)
 		drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) !important;
 	opacity: 0.69;
+	overflow: hidden;
+	transition: all 1.69s linear;
 }
+
+/* ! 12-10-19 | Attempt to highlight active tab in case accent does not distinguish on tabstrip hover | ACTTAB-HIGHLIGHT*/
+/* ?USEFUL SELECT0rz - :not(:nth-last-of-type(2)) */
+/* * MOAR: :not(.tab:last-of-type) .tab.active:not(:only-of-type) | :not(.newtab):hover | :not(span):only-of-type */
+.tab-strip:hover .tab.active {
+	/* border-color: var(--colorborderhighlight) !important;
+	border-bottom-style: double;
+	border-bottom-width: 2.5px;
+	border-right-style: double;
+	border-left-style: double; */
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 2px solid #51cbee;
+	border-width: 0px 2px 2px 2px;
+	transition: all 1.69s linear;
+	/* width: initial; */
+	overflow: hidden;
+	/* align-content: center; */
+}
+#header:hover .tabstrip:hover .newtab:hover .tab.active {
+	box-shadow: unset;
+	border: unset;
+	/* top: -5px; */
+}
+
+.tab-strip:hover .tab.active:hover {
+	/* width: max-content; */
+	/* overflow: visible; */
+	transition: all 1.69s linear;
+}
+
+/* .tab-strip:hover .tab.active:hover .tab.tab.tab:not(.active) {
+	visibility: collapse;
+} */
 
 /* .tab:not(.active) .tab-position:not(:hover) {
 	opacity: 0.69;
@@ -466,7 +517,7 @@ div#browser.maximized
 .color-behind-tabs-off .vivaldi span.burger-icon {
 	padding-right: 1px;
 	margin-left: 12px;
-	filter: drop-shadow(1px 1px 1px var(--colorAccentBg)) !important;
+	/* filter: drop-shadow(1px 1px 1px var(--colorAccentBg)) !important; */
 }
 
 .vivaldi:hover .burger-icon svg {
@@ -480,6 +531,12 @@ div#browser.maximized
 	margin-top: 32px !important;
 }
 
+/* ? Enable dis to turn off vingette effect (that was totally accidental tbh) */
+/*
+#header:hover ~ #main {
+	-webkit-mask-image: none !important;
+}
+*/
 .button-toolbar.paneltogglefooter {
 	background-color: var(--colorAccentBGAlpha);
 }
@@ -488,11 +545,12 @@ div#browser.maximized
 	background-color: var(--colorAccentBG);
 }
 
-.button-toolbar.home:hover,
+/* ? 12-10-19 - Changing for slight aesthetic annoyance of webpanel header button rightmost hover changing border radius (border-bottom-right) */
+/* .button-toolbar.home:hover,
 .button-toolbar.toggle-extensions-group:hover {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
-}
+} */
 
 .address-top .toolbar-addressbar:after,
 .address-top .toolbar-mailbar:after {
@@ -518,7 +576,44 @@ div#browser.maximized
 }
 
 .extension-popup.top {
-	/* position: absolute !important; */
+	position: absolute !important;
+	margin-top: 25px;
+}
+.extensionIconPopupMenu {
+	/* margin-top: 25px; */
+	top: 67px;
+	max-width: unset !important;
+	background: var(--colorAccentBgFadedMore);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.button-toolbar.ExtensionDropdownIcon button:hover {
+	transform: scale(1.25);
+	background-color: var(--colorAccentBgDarker);
+	border-radius: 10px;
+	border: 1px ridge rgb(58, 54, 54);
+	z-index: 1;
+}
+.button-toolbar.ExtensionDropdownIcon button {
+	transition: transform 0.2s;
+	z-index: initial;
+	border: initial;
+}
+
+.button-popup-arrow--dark--below {
+	top: 69px;
+}
+.button-popup-arrow--light--below {
+	top: 69px;
+}
+.button-popup {
+	top: 69px !important;
+}
+
+.addressfield-popup.top {
 	margin-top: 25px;
 }
 
@@ -539,11 +634,13 @@ div#browser.maximized
 }
 
 .newtab svg {
+	/* border-radius: 25px !important; */
 	border-color: var(--colorAccentBG) !important;
 	border-width: 1px;
 	opacity: 0.69;
 	padding: 0.8px;
 	border-style: solid;
+	transition: all 1.69s linear;
 }
 
 /* #tabs-container:hover */
@@ -566,6 +663,11 @@ div#browser.maximized
 /* ? ADDING (6-15-19) more distinguished active tab */
 .tab.active {
 	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5)) !important;
+	overflow: hidden;
+	transition: all 690ms cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+	/* ? Trying to get rid of 1 tab highlight thing */
+	/* border: none; */
+	/* box-shadow: none; */
 }
 
 /* WAS .tab-position .tab .progress-indicator.progress-done {  | REVERTED BACK CUZ JUST .progress-done didn't work for some reason */
@@ -581,6 +683,27 @@ select {
 	background-blend-mode: luminosity;
 }
 
+/* ? Focused Highlight Color */
+button:focus:not([tabindex="-1"]),
+input:focus:not([tabindex="-1"]),
+select:focus:not([tabindex="-1"]),
+textarea:focus:not([tabindex="-1"]),
+input[type="text"]:focus:not([tabindex="-1"]),
+input[type="search"]:focus:not([tabindex="-1"]),
+input[type="password"]:focus:not([tabindex="-1"]),
+input[type="email"]:focus:not([tabindex="-1"]),
+input[type="url"]:focus:not([tabindex="-1"]),
+input[type="number"]:focus:not([tabindex="-1"]),
+input[type="radio"]:focus:not([tabindex="-1"]),
+input[type="date"]:focus:not([tabindex="-1"]),
+input[type="time"]:focus:not([tabindex="-1"]),
+input[type="checkbox"]:focus:not([tabindex="-1"]),
+input[type="button"]:focus:not([tabindex="-1"]),
+input[type="submit"]:focus:not([tabindex="-1"]) {
+	border-color: var(--colorAccentBgDarker);
+	outline-color: var(--colorAccentBgDark);
+}
+
 /* * ----------------------------------------------------- TOOLBARZ  ----------------------------------------------------- */
 /* ! Header...hardly know er */
 
@@ -589,7 +712,8 @@ select {
 	width: 100%;
 	max-height: 27px;
 	transform: translateY(-90%);
-	transition: transform 0.69s !important;
+	transition: all 0.69s !important;
+	transition-delay: 1.69s;
 	z-index: 10;
 }
 
@@ -597,7 +721,36 @@ select {
 	transform: translateY(0);
 	/*! or 34 px*/
 	transition-delay: 2.69s;
-	z-index: 4;
+	z-index: 6;
+}
+
+/* ! Window behavior */
+
+#browser:not(.maximized) #header:hover {
+	transform: translateY(-21%);
+	z-index: 1;
+}
+#browser:not(.maximized) #header {
+	transform: translateY(-105%);
+}
+
+/* ? Trying to make windowbuttonz NOT do header hover ish */
+
+div#browser.maximized > div#header ~ .window-buttongroup:hover {
+	transform: translateY(-90%);
+	transition: transform 0.69s !important;
+}
+
+/* ? Adding overlay effect I guess?! */
+
+#header:hover ~ #main:not(#tabs-container) {
+	filter: brightness(0.35);
+	transition: all 1.69s linear;
+	transition-delay: 1.69s;
+}
+
+#header:not(:hover) {
+	transition: all 0.69s linear;
 }
 
 /* ! ADDRESSBURRRR */
@@ -619,9 +772,29 @@ select {
 	margin-right: 5px;
 }
 
+/* ? Smooth gradient from address bar to progress info - also see ProgressBarTOStatusBar.css */
+.UrlBar-UrlFieldWrapper {
+	-webkit-mask-image: -webkit-linear-gradient(180deg, #0000 0, #000 20px);
+}
+
 /* ? Reload button Spinny ! */
 .toolbar-addressbar .button-toolbar button[title~="Reload"]:hover {
 	border-radius: 20px !important;
+	animation-name: spin2win;
+	animation-duration: 250ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+#panels
+	> div.panel-group
+	> div
+	> div
+	> div.panel.webpanel.visible
+	> header
+	> div
+	> div:nth-child(3)
+	> button:hover {
+	/* border-radius: 20px !important; */
 	animation-name: spin2win;
 	animation-duration: 250ms;
 	animation-iteration-count: 1;
@@ -660,12 +833,14 @@ select {
 	width: 100%;
 	max-width: 50%; */
 	padding-bottom: 4px !important;
-	padding-top: 8px;
+	/* padding-top: 8px; */
+	/* * Adding padding for tabz */
+	padding-top: 12px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	margin-top: -30px;
 	top: 24px;
-	z-index: 1 !important;
+	/* z-index: 1 !important; */
 	/* transform: translateY(-90%); */
 	transition: all ease-in 0.15s !important;
 	/* transition-delay: 1.69ms !important; */
@@ -681,15 +856,19 @@ select {
 	max-width: 50%;
 }
 
+.win.normal .toolbar-addressbar:hover {
+	padding-top: 16px;
+}
+
 /* ~ :not(.bookmark-bar:hover) */
 .toolbar-addressbar:not(:focus-within):not(:hover) {
 	/* top: 0px !important; */
 	transform: translateY(-78%);
 	opacity: 0.01 !important;
-	border-radius: 10px !important;
+	border-radius: 10px;
 	transition: all ease-out 0.15s 0.69s !important;
 	/* transition-delay: 1.69ms !important; */
-	z-index: 1 !important;
+	/* z-index: 1 !important; */
 }
 
 .profile-popup {
@@ -727,6 +906,28 @@ select {
 	}
 }
 
+@keyframes pulsecolor {
+	0% {
+		color: var(--colorAccentBgDarker);
+	}
+
+	40% {
+		color: var(--colorAccentBgFadedMost);
+		filter: invert(100%);
+		/* color: var(--colorFgAlpha); */
+	}
+
+	60% {
+		color: var(--colorAccentBgFadedMost);
+		filter: invert(100%);
+		/* color: var(--colorFgAlpha); */
+	}
+
+	100% {
+		color: var(--colorAccentBgDarker);
+	}
+}
+
 @keyframes spinny {
 	0% {
 		fill: var(--colorAccentBgDark);
@@ -759,6 +960,12 @@ select {
 	}
 }
 
+@keyframes spindlebindle {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 /* ! Window Controlzzz */
 #browser.win.win10 .window-buttongroup:hover {
 	z-index: 1;
@@ -773,20 +980,83 @@ select {
 	fill: rgba(255, 255, 255, 0.56);
 }
 
+.window-minimize:hover {
+	fill: #fff;
+}
+
+.window-maximize:hover {
+	fill: #fff;
+}
+
+.close {
+	z-index: 1;
+	position: relative;
+	font-size: inherit;
+	font-family: inherit;
+	color: white;
+	/* padding: 0.5em 1em; */
+	outline: none;
+	border: none;
+	background-color: hsla(0, 33%, 22%, 0.623);
+	overflow: hidden;
+	transition: all 0.69s ease; /* ? WAS color 0.4s ease-in-out */
+}
+
+.close::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: #ff3c3c;
+	transform-origin: center;
+	transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+	transition: all 0.69s ease;
+}
+
+.close:hover {
+	cursor: crosshair;
+	/* color: #161616b0; */
+	/* color: var(--colorAccentBgAlphaHeavy); */
+	/* animation-name: pulsecolor;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite; */
+	/* border: 3px solid #7c2222; */
+	/* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)); */
+	/* box-shadow: 1px 4px 25px 2px rgba(0, 0, 0, 1); */
+	box-shadow: inset 10px 10px 4px -8px rgba(0, 0, 0, 0.75);
+	border: 0.69px solid rgba(0, 0, 0, 0.287);
+	border-radius: 8px;
+	transition: all 0.69s ease;
+}
+
+.close:hover svg {
+	animation: spindlebindle 1s linear infinite;
+}
+
+.close:hover::before {
+	transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+	transition: all 0.69s ease;
+}
+
 button.window-maximize:hover,
 button.window-minimize:hover {
 	opacity: 1;
 }
 
 /* ? ADDING (6-15-19) Effectz to close to make it stand out */
+/*
 .close:hover {
 	background-color: rgba(127, 26, 26, 0.416);
 	fill: rgba(255, 255, 255, 0.56);
 	/* animation: none; */
-	/* animation-name: spinny;
+/* animation-name: spinny;
 	animation-duration: 5000ms;
 	animation-iteration-count: infinite;
-	animation-timing-function: linear; */
+	animation-timing-function: linear; */ /*
 	box-shadow: 1px 4px 25px 2px rgba(0, 0, 0, 1);
 	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)) !important;
 	border-radius: 10px;
@@ -809,7 +1079,7 @@ button.window-minimize:hover {
 	text-decoration-color: #55131f;
 	text-decoration-style: solid;
 }
-
+*/
 /* !Window Distinctionz */
 
 :not(#browser.win.maximized) .toolbar-addressbar {
@@ -843,20 +1113,22 @@ button.window-minimize:hover {
 
 :not(#browser.win.maximized) #header:hover ~ #main .toolbar-addressbar {
 	transform: translateY(90%);
+	padding-top: 8px;
 }
 
 /* :not(#browser.win.maximized) #tabs-Container {
 	transform: translateY(-15%);
 } */
 
-:not(#browser.win.maximized) #tabs-container.top {
-	/* padding-top: calc(var(--padding)+6px); */
+/* ? Removing for window z-index problems */
+/* :not(#browser.win.maximized) #tabs-container.top {
+	/* padding-top: calc(var(--padding)+6px); */ /*
 	padding-top: 0px !important;
 }
 
 .win10.normal #header:hover #tabs-container.top {
 	padding-top: 0px !important;
-}
+} */
 
 /* ! NEW 7-17-19 */
 .close:hover .tab {
@@ -901,6 +1173,10 @@ button.window-minimize:hover {
 	pointer-events: all;
 }
 
+.sync-and-trash-container:hover {
+	fill: var(--colorAccentBGAlpha);
+}
+
 /* ! Popup Window Header Adjustmentz */
 .win.win10#browser.popup #titlebar {
 	background-color: transparent !important;
@@ -930,6 +1206,12 @@ button.window-minimize:hover {
 	left: unset !important;
 }
 
+.toolbar-addressbar:not(.search)
+	.addressfield-popup-container
+	.addressfield-popup {
+	margin-top: 38px;
+}
+
 .toolbar-medium .button-popup.button-popup-below,
 .toolbar-small .button-popup.button-popup-below {
 	top: 69px;
@@ -947,37 +1229,73 @@ button.window-minimize:hover {
 	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
 }
 
+.webviewbtn:hover {
+	animation: pulse;
+}
+
 .webpanel-header {
 	z-index: 0;
 }
 
 #panels-container {
-	transition: all linear 0.269s !important;
+	transition: all 420ms linear;
 }
+
+.panel-group {
+	opacity: 0.98 !important;
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
+	border-top-right-radius: 0 !important;
+	transition: all 690ms linear !important;
+	-webkit-mask-image: unset;
+}
+
+/* ? 12-19-19 - Panel gradient bs - had important*/
+#header:hover ~ #main,
+#panel_switch,
+#switch:not(:hover),
+.panel-group:not(:hover) {
+	-webkit-mask-image: linear-gradient(180deg, #0000 0, #fff 10px);
+}
+
+/* ! OLD - 11-29-19 - revert to if panel opacity doesn't transition more slowly
+#panels-container {
+	transition: all linear 0.269s !important;
+} */
 
 /* ? MAIN PANEL BACKGROUND */
 .panel-group:not(:hover) {
 	opacity: 0.69 !important;
-	border-top-right-radius: 10px !important;
-	filter: blur(0.69px) !important;
+	filter: blur(0.42px) !important;
+	border-top-right-radius: 15px !important;
+	transition-delay: all 2.69s linear;
+	transition: all 690ms linear !important;
 }
 
 /* ? Sorting Headerz */
 .sortselector.sortselector-compact {
-	background-color: var(--colorAccentBorderDark) !important;
+	border-color: var(--colorAccentBorderDark) !important;
+}
+
+.sortselector.sortselector-compact .sortselector-button {
+	border-left: thin solid var(--colorAccentBorderDark);
 }
 
 #panels {
 	fill: var(--colorAccentBG) !important;
-	/* opacity: 0.69 !important; */
 	animation: pulse;
 	z-index: 4;
 	transition: all 69ms linear;
+	/* border-top-right-radius: 10px !important; */
+	/* ? SEE PANEL-GROUP ABOVE FOR ROUND BORDER PROPERTY THINGY */
 }
 
 #panels-container.overlay:not(.switcher) #panels:not(:hover) {
-	transform: translateX(-36px);
+	opacity: 0.69 !important;
+	transform: translateX(-40px);
 	transition: all 69ms linear;
+	transition-delay: 690ms;
 }
 
 :not(button.tabs) .button-badge {
@@ -986,10 +1304,12 @@ button.window-minimize:hover {
 }
 
 #panel_switch {
-	/* width: 4px !important; */
+	width: 4px !important;
 	fill: var(--colorAccentBG) !important;
-	flex: unset !important;
+	flex: 1 5 10px !important;
+	/* flex: unset !important; */
 	z-index: 8;
+	opacity: 1;
 }
 
 #panel_switch:hover {
@@ -997,7 +1317,7 @@ button.window-minimize:hover {
 	animation-name: pulse;
 	animation-duration: 1.69s;
 	animation-iteration-count: infinite;
-	opacity: 0.69 !important;
+	/* opacity: 0.69 !important; */
 }
 
 /* #panels-container.left.button */
@@ -1021,23 +1341,46 @@ button.window-minimize:hover {
 
 #panels-container.left #panel_switch #switch {
 	z-index: 1;
+	/* border-top-style: inset;
+	border-top-width: thin; */
 }
 
 /** Hide panel behind bookmarkz */
+/*
 #switch #panel_switch {
 	z-index: 1;
+}
+*/
+/* ? Fixing weird panel button gap thing */
+#switch #panel #panel_switch {
+	flex: 0 0 40px !;
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
+}
+
+#panels-container.left #switch {
+	overflow-y: overlay;
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
 }
 
 /* ! SCROLLBURRZ */
 
+/* ? Fix for ABOVE panel scrollbar to hide but remain functional */
+::-webkit-scrollbar {
+	display: none;
+}
+
 /* UI scrollbars with highlight color */
 #browser ::-webkit-scrollbar-thumb {
-	background-color: var(--colorHighlightBgDark) !important;
+	background-color: var(--colorAccentBgAlphaHeavy) !important;
 }
 
 #browser ::-webkit-scrollbar-thumb:hover,
 #browser ::-webkit-scrollbar-thumb:active {
-	background-color: var(--colorHighlightBg) !important;
+	background-color: var(--colorAccentBg) !important;
 }
 
 /* ? FIND BAR ISH */
@@ -1051,7 +1394,7 @@ button.window-minimize:hover {
 	border-radius: var(--radius);
 	max-width: fit-content;
 	margin: 0 auto;
-	padding-top: 8px !important;
+	/* padding-top: 8px !important; */
 	right: 0;
 	left: 0;
 	z-index: 1;
@@ -1146,9 +1489,9 @@ button.window-minimize:hover {
 	margin: 5px !important;
 }
 
-.searchfield .SearchEngineSelect-Icon {
+/* .searchfield .SearchEngineSelect-Icon {
 	margin-right: 0px !important;
-}
+} */
 
 #main .searchfield nav.menu {
 	top: 64px;
@@ -1160,4 +1503,9 @@ button.window-minimize:hover {
 
 .SiteInfoButton-SecurityBadge {
 	width: unset;
+}
+
+/* Fix nonsense bar thing on left for some reason */
+#panels-container.overlay:not(.minimized).button.left ~ #webview-container {
+	margin-left: unset;
 }

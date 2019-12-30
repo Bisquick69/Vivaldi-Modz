@@ -20,3 +20,17 @@
 	transform: translateX(4px);
 	transition: transform 0.69s ease-in-out !important;
 }
+
+/* ! PINNED STUFF */
+
+/*
+.tab.pinned {
+	transform: translateY(0) !important;
+	background: var(--colorAccentBgDarker) !important;
+	/* width: fit-content !important; */ /*
+}
+
+.tab.pinned:hover {
+	width: fit-content !important;
+}
+*/

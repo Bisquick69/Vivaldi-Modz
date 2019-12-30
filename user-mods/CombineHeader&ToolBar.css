@@ -1,5 +1,5 @@
 /* Remove header */
-:-webkit-any(.native, .maximized)#browser #header {
+:-webkit-any(.native, .maximized) #browser #header {
 	min-height: 0 !important;
 }
 
@@ -20,11 +20,11 @@
 }
 
 /* Reduce toolbar size for horizontal menu */
-/*
-:-webkit-any(.native, .maximized).horizontal-menu#browser:not(.tabs-top) .toolbar.toolbar-addressbar {
+
+:-webkit-any(.native, .maximized).horizontal-menu#browser:not(.tabs-top)
+	.toolbar.toolbar-addressbar {
 	padding-left: 267px;
 }
-*/
 
 /* ! 9-23-19 - Give some room in addybar to see header title */
 :-webkit-any(.native, .maximized)#browser:not(.tabs-top)
@@ -62,16 +62,19 @@
 /* Tabs on top fixes */
 
 /* Maximized not Native - Reduce tab bar size for horizontal menu and window buttons */
-/*
+
 .maximized.horizontal-menu#browser:not(.native) #tabs-container.top {
 	padding-left: 276px !important;
 	padding-right: 140px !important;
 }
-*/
+
+.maximized.horizontal-menu#browser:not(.native) #tabs-container.top .newtab {
+	margin-left: 85px !important;
+	transform: scale(0.85) !important;
+}
 
 /* Native - Reduce tab bar size for horizontal menu and window buttons */
-/*
+
 .native.horizontal-menu#browser #tabs-container.top {
 	padding-left: 276px !important;
 }
-*/

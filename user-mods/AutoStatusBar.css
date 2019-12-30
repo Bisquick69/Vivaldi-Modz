@@ -10,6 +10,8 @@
 	border-radius: var(--radius);
 	border: none;
 	transition: 0.15s 0s !important;
+	/* ! Added to try and prevent  undesired popup (11-7-19) */
+	transition-delay: 0.69s linear !important;
 }
 .toolbar-statusbar:not(:focus-within):not(:hover) {
 	height: 12px;
@@ -20,15 +22,28 @@
 	opacity: 0;
 	transition: opacity 0s 0.55s !important;
 }
+
+/*? TXT size */
+#vivaldi-tooltip {
+	font-size: 11px !important;
+}
+
 .status-info.visible {
 	visibility: visible;
+	/* background: var(--colorAccentBgFaded) !important; */
+	/* animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite; */
+	border-radius: 10px !important;
+	opacity: 0.69;
 }
 .status-info {
 	position: fixed;
 	left: 0;
 	bottom: 1px;
 	padding: 1.5px 8px 2px;
-	border-radius: 0 var(--radius) 0 0;
-	background: var(--colorBgDark);
+	/* border-radius: 0 var(--radius) 0 0; */
+	/* background: var(--colorBgDark); */
+	transition: all 690ms linear;
 	visibility: hidden;
 }
