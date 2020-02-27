@@ -21,16 +21,15 @@
 
 /* Reduce toolbar size for horizontal menu */
 
-:-webkit-any(.native, .maximized).horizontal-menu#browser:not(.tabs-top)
-	.toolbar.toolbar-addressbar {
+:-webkit-any(.native, .maximized).horizontal-menu#browser:not(.tabs-top) .toolbar.toolbar-addressbar {
 	padding-left: 267px;
 }
 
 /* ! 9-23-19 - Give some room in addybar to see header title */
-:-webkit-any(.native, .maximized)#browser:not(.tabs-top)
-	.toolbar.toolbar-addressbar {
+:-webkit-any(.native, .maximized)#browser:not(.tabs-top) .toolbar.toolbar-addressbar {
 	padding-top: 24px;
 }
+
 :-webkit-any(.native, .maximized)#browser:not(.tabs-top) #titlebar #pagetitle {
 	top: 2px;
 }
@@ -54,8 +53,7 @@
 }
 
 /* Remove vivaldi button, horizontal menu and window buttons when no ui */
-.maximized.minimal-ui#browser
-	:-webkit-any(.vivaldi, .topmenu, .window-buttongroup) {
+.maximized.minimal-ui#browser:not(.popup):-webkit-any(.vivaldi, .topmenu, .window-buttongroup) {
 	display: none !important;
 }
 

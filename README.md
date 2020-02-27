@@ -4,7 +4,7 @@ Some modifications to the Vivaldi browser mostly for fun/learning. Feel free to 
 
 # Preview
 
-![Preview](IMGz/Vivaldi-UI-Modz.gif?raw=true)
+![Preview](IMGz/Preview.gif?raw=true)
 
 # Installation
 

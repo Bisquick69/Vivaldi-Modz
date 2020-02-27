@@ -1,7 +1,16 @@
+/* Header hover but not on tabstrip, lower tabs */
+#browser.tabs-top #header:hover .tab-strip:not(:hover) .tab:not(.active) {
+	transform: translateY(0);
+	transition: transform 0.69s ease-in-out !important;
+	color: var(--colorAccentFg);
+	background: linear-gradient(180deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy)) !important;
+}
+
 #browser.tabs-top .tab:not(.active):hover {
 	transform: translateY(0);
 	transition: transform 0.69ms !important;
 }
+
 #browser.tabs-top .tab:not(.active) {
 	transform: translateY(-4px);
 	transition: transform 0.69s ease-in-out !important;
@@ -12,10 +21,12 @@
 	transform: translateX(0);
 	transition: transform 0.69ms !important;
 }
+
 #browser.tabs-left .tab:not(.active) {
 	transform: translateX(-2px);
 	transition: transform 0.69s ease-in-out !important;
 }
+
 #browser.tabs-right .tab:not(.active) {
 	transform: translateX(4px);
 	transition: transform 0.69s ease-in-out !important;
@@ -27,7 +38,8 @@
 .tab.pinned {
 	transform: translateY(0) !important;
 	background: var(--colorAccentBgDarker) !important;
-	/* width: fit-content !important; */ /*
+	/* width: fit-content !important; */
+/*
 }
 
 .tab.pinned:hover {

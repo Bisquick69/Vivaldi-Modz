@@ -2,9 +2,11 @@ function toggleTabBar () {
 	if (tabStrip.childNodes.length === 2) {
 		// tabsContainer.style.height = "1px";
 		tabsContainer.style.opacity = "0";
-		tabsContainer.style.width = "0";
-		newTab.style.position = "inherit";
-		newTab.style.margin = "-8px 0 0 -5px";
+		tabsContainer.style.width = "0px";
+		// newTab.style.position = "inherit";
+		newTab.style.position = "absolute";
+		// newTab.style.margin = "-8px 0 0 -5px"; - for NON-centered Tabz
+		newTab.style.margin = "-10px 0px 1px 0px";
 		tabStrip.style.height = "0";
 		// addressBar.style.paddingTop = "30px";
 		// addressBar.style.padding = "0px 0px 0px 4px";
@@ -18,8 +20,8 @@ function toggleTabBar () {
 		// tabsContainer.style.height = "30px";
 		tabsContainer.style.opacity = "1";
 		tabsContainer.style.width = "180px";
-		newTab.style.position = "absolute";
-		newTab.style.margin = "0";
+		// newTab.style.position = "absolute";
+		// newTab.style.margin = "0";
 		tabStrip.style.height = "30px";
 		// addressBar.style.paddingTop = "0";
 		// addressBar.style.padding = "25px 0 0 4px";

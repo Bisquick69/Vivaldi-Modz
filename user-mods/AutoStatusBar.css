@@ -1,23 +1,50 @@
+/* animationz */
+@keyframes glowy {
+	0% {
+		opacity: 0.45;
+	}
+
+	50% {
+		opacity: 0.92;
+		/* background: linear-gradient(var(--colorAccentBg), var(--colorAccentBgAlphaHeavy)); */
+	}
+
+	100% {
+		opacity: 0.45;
+	}
+}
+
 /* automate status bar */
 .toolbar-statusbar {
 	position: fixed;
 	bottom: 0;
 	right: 0;
 	z-index: 9;
-	height: 26px;
-	width: auto;
+	/* height: 26px; */
+	height: 18px !important;
+	/* width: auto; */
+	width: fit-content !important;
 	padding-top: 2px;
-	border-radius: var(--radius);
-	border: none;
-	transition: 0.15s 0s !important;
+	/* border-radius: var(--radius); */
+	border-radius: 10px !important;
+	/* border: none; */
+	border: 1px groove var(--colorAccentBgDark) !important;
+	transition: 0.69s;
 	/* ! Added to try and prevent  undesired popup (11-7-19) */
-	transition-delay: 0.69s linear !important;
+	transition-delay: 0.69s;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	font-size: 8px !important;
+	opacity: 0.69 !important;
 }
+
 .toolbar-statusbar:not(:focus-within):not(:hover) {
 	height: 12px;
 	background: transparent !important;
 	transition: 0.15s 0.4s !important;
 }
+
 .toolbar-statusbar:not(:focus-within):not(:hover) :not(.status-info) {
 	opacity: 0;
 	transition: opacity 0s 0.55s !important;
@@ -25,25 +52,53 @@
 
 /*? TXT size */
 #vivaldi-tooltip {
-	font-size: 11px !important;
+	font-size: 8px !important;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
 }
 
-.status-info.visible {
+.StatusInfo--Visible {
 	visibility: visible;
 	/* background: var(--colorAccentBgFaded) !important; */
 	/* animation-name: pulse;
 	animation-duration: 1.69s;
 	animation-iteration-count: infinite; */
-	border-radius: 10px !important;
-	opacity: 0.69;
+	/* border: 1px solid var(--colorAccentBgDark) !important; */
+	/* border-radius: 10px !important; */
+	/* opacity: 0.69; */
+	/* animation-name: glowy; */
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	font-size: 10px !important;
+	transition: 690ms;
 }
-.status-info {
-	position: fixed;
-	left: 0;
-	bottom: 1px;
-	padding: 1.5px 8px 2px;
+
+.StatusInfo {
+	/* position: fixed; */
+	/* left: 0; */
+	/* bottom: 1px; */
+	/* padding: 1.5px 8px 2px !important; */
 	/* border-radius: 0 var(--radius) 0 0; */
 	/* background: var(--colorBgDark); */
-	transition: all 690ms linear;
-	visibility: hidden;
+	/* border: 1px solid var(--colorAccentBgDark) !important; */
+	/* border-radius: 10px !important; */
+	transition: 690ms;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+}
+
+#webview-container~.StatusInfo .StatusInfo-Content {
+	border: 1px solid var(--colorAccentBorder);
+	/* opacity: 0.69; */
+	border-radius: 8px !important;
+	animation-name: glowy;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	transition: opacity 690ms;
 }

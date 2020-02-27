@@ -1,0 +1,67 @@
+.hasfocus .panel#downloads .vivaldi-tree:focus-within .tree-row[data-selected] .DownloadItem-ActionButton {
+    --backgroundColor: var(--colorAccentBgAlpha) !important;
+    --foregroundColor: var(--colorAccentAlphaHeavy) !important;
+    border: 1px solid var(--colorAccentBorder) !important;
+    fill: var(--colorAccentFg) !important;
+}
+
+.hasfocus .vivaldi-tree.no-selection:focus-within:after {
+    box-shadow: inset 0 0 0 2px var(--colorAccentBgAlpha) !important;
+}
+
+button:focus:not([tabindex='-1']),
+input:focus:not([tabindex='-1']),
+select:focus:not([tabindex='-1']),
+textarea:focus:not([tabindex='-1']),
+input[type=text]:focus:not([tabindex='-1']),
+input[type=search]:focus:not([tabindex='-1']),
+input[type=password]:focus:not([tabindex='-1']),
+input[type=email]:focus:not([tabindex='-1']),
+input[type=url]:focus:not([tabindex='-1']),
+input[type=number]:focus:not([tabindex='-1']),
+input[type=radio]:focus:not([tabindex='-1']),
+input[type=date]:focus:not([tabindex='-1']),
+input[type=time]:focus:not([tabindex='-1']),
+input[type=checkbox]:focus:not([tabindex='-1']),
+input[type=button]:focus:not([tabindex='-1']),
+input[type=submit]:focus:not([tabindex='-1']) {
+    border-color: var(--colorAccentBorder) !important;
+    box-shadow: 0 0 0 1px var(--colorAccentBorder) !important;
+}
+
+select[multiple]:focus option:checked,
+select[size]:focus option:checked {
+    color: var(--colorHighlightFg) !important;
+    background: linear-gradient(var(--colorAccentBg), var(--colorAccentBgAlpha)) !important;
+}
+
+#browser .Switch-Input:checked {
+    background-color: var(--colorAccentBg) !important;
+}
+
+input[type=button][type=submit]:active,
+input[type=submit][type=submit]:active,
+input[type=color][type=submit]:active,
+.webpage-button[type=submit]:active,
+input[type=button].primary:active,
+input[type=submit].primary:active,
+input[type=color].primary:active,
+.webpage-button.primary:active {
+    color: var(--colorAccentFg) !important;
+    background: var(--colorAccentBg) !important;
+    border-color: var(--colorAccentBorder) !important;
+}
+
+input[type=checkbox]:before,
+input[type=checkbox]:after {
+    background-color: var(--colorAccentBg) !important;
+}
+
+input[type=checkbox]:before:hover,
+input[type=checkbox]:after:hover {
+    background-color: var(--colorAccentBgDarker) !important;
+}
+
+#panels> :not(#window-panel) {
+    -webkit-mask-image: linear-gradient(#0000 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001px, var(--colorAccentBg) 10px) !important;
+}

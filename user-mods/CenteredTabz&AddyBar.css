@@ -1,0 +1,29 @@
+/*Bookmark centered*/
+.bookmark-bar .observer {
+	justify-content: center;
+}
+
+/*Tab centering*/
+.tab-strip {
+	display: flex;
+	justify-content: center;
+}
+
+.tab-position {
+	position: relative;
+	left: 0 !important;
+}
+
+/*
+#tabs-container .newtab {
+	position: relative !important;
+	left: auto !important;
+	top: 10.69px !important;
+}
+*/
+
+#tabs-container .newtab {
+	position: absolute !important;
+	left: auto !important;
+	top: 7px !important;
+}
