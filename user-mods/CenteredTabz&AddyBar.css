@@ -14,16 +14,16 @@
 	left: 0 !important;
 }
 
-/*
-#tabs-container .newtab {
-	position: relative !important;
-	left: auto !important;
-	top: 10.69px !important;
-}
-*/
 
 #tabs-container .newtab {
+	/* position: relative !important; */
+	left: auto !important;
+	top: 10.69px;
+}
+
+
+#browser.maximized #tabs-container .newtab {
 	position: absolute !important;
 	left: auto !important;
-	top: 7px !important;
+	top: 7px;
 }

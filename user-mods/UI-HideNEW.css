@@ -23,6 +23,7 @@
 	transform: scale(0.05) !important;
 }
 
+/*
 .panelbtn.webviewbtn[title="vivaldi://extensions/"]>svg path {
 	d: path("M 448.801,271 H 497 c 8.284,0 15,-6.716 15,-15 V 111.4 c 0,-8.284 -6.716,-15 -15,-15 H 367.4 V 63.2 C 367.4,28.351 339.048,0 304.2,0 269.352,0 241,28.352 241,63.2 V 96.4 H 111.4 c -8.284,0 -15,6.716 -15,15 V 241 H 63.2 C 28.352,241 0,269.352 0,304.2 c 0,34.848 28.352,63.2 63.2,63.2 H 96.4 V 497 c 0,8.284 6.716,15 15,15 H 256 c 8.284,0 15,-6.716 15,-15 v -48.2 c 0,-18.307 14.894,-33.2 33.2,-33.2 18.306,0 33.2,14.894 33.2,33.2 V 497 c 0,8.284 6.716,15 15,15 H 497 c 8.284,0 15,-6.716 15,-15 V 352.4 c 0,-8.284 -6.716,-15 -15,-15 h -48.199 c -18.308,0 -33.201,-14.894 -33.201,-33.2 0,-18.306 14.893,-33.2 33.201,-33.2 z m 0,96.4 H 482 V 482 H 367.4 v -33.2 c 0,-34.849 -28.352,-63.2 -63.2,-63.2 -34.848,0 -63.2,28.351 -63.2,63.2 V 482 H 126.4 V 352.4 c 0,-8.284 -6.716,-15 -15,-15 H 63.2 C 44.893,337.4 30,322.506 30,304.2 30,285.894 44.894,271 63.2,271 h 48.2 c 8.284,0 15,-6.716 15,-15 V 126.4 H 256 c 8.284,0 15,-6.716 15,-15 V 63.2 C 271,44.893 285.894,30 304.2,30 c 18.306,0 33.2,14.894 33.2,33.2 v 48.2 c 0,8.284 6.716,15 15,15 H 482 V 241 h -33.199 c -34.85,0 -63.201,28.352 -63.201,63.2 0,34.848 28.351,63.2 63.201,63.2 z"
 		) !important;
@@ -33,10 +34,12 @@
 	background: url(https://image.flaticon.com/icons/svg/786/786285.svg) !important;
 	transform: scale(0.05) !important;
 }
-
+*/
 /* ! UI TEXT ADJUSTMENTZ */
 * {
-	text-shadow: transparent 0 0 0, rgba(0, 0, 0, 0.8) 0 0 0 !important;
+	text-shadow: transparent 0 0 0,
+		rgba(0, 0, 0, 0.8) 0 0 0,
+		0px 0px 2px black !important;
 }
 
 .dial-folder-icon {
@@ -154,9 +157,9 @@
 }
 
 .newtab {
-	top: -10px;
+	/* top: 10px !important; */
 	filter: drop-shadow(1px 1px 5px var(--colorBgAlpha));
-	/* margin: 0; */
+	margin: 0 !important;
 	padding: 6px;
 	transform: scale(1.25);
 	z-index: 69 !important;
@@ -569,6 +572,11 @@ div#browser.maximized>div#header>div#tabs-container>div.resize>div.tab-strip>spa
 	text-shadow: 1px 1px 1px rgba(10, 1, 1, 0.945);
 }
 
+.color-behind-tabs-off .toolbar-mainbar>.button-toolbar>button.button-pressed {
+	/* background-image: linear-gradient(var(--colorAccentBgDarker), var(--colorAccentBgDark)); */
+	border-bottom-right-radius: 10px;
+}
+
 .extension-popup.top {
 	position: absolute !important;
 	margin-top: 25px;
@@ -587,12 +595,18 @@ div#browser.maximized>div#header>div#tabs-container>div.resize>div.tab-strip>spa
 
 .button-popup .button-popup-wrapper {
 	background-color: var(--colorAccentBGDarker);
+	overflow: visible;
+}
+
+/* ? To round borders inside of wrapper declared above */
+.button-popup {
+	overflow: hidden;
 }
 
 .button-toolbar.ExtensionDropdownIcon button:hover {
 	transform: scale(1.25);
 	background-color: var(--colorAccentBgDarker);
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	border: 1px ridge rgb(58, 54, 54);
 	z-index: 1;
 }
@@ -710,12 +724,17 @@ input[type="checkbox"]:focus:not([tabindex="-1"]),
 input[type="button"]:focus:not([tabindex="-1"]),
 input[type="submit"]:focus:not([tabindex="-1"]) {
 	border-color: var(--colorAccentBgDarker);
-	outline-color: var(--colorAccentBgDark);
+	outline-color: var(--colorAccentBgAlpha);
 }
 
 /* * ----------------------------------------------------- TOOLBARZ  ----------------------------------------------------- */
-/* ! Header...hardly know er */
+/*!  MAIN transitionz - 3-1-20 */
+#main.left {
+	transition-duration: 561.2351154110663ms;
+	transition-delay: 690ms;
+}
 
+/* ! Header...hardly know er */
 /* #browser:not(.popup)  */
 #header {
 	position: fixed !important;
@@ -723,22 +742,25 @@ input[type="submit"]:focus:not([tabindex="-1"]) {
 	max-height: 27px;
 	transform: translateY(-90%);
 	box-shadow: none !important;
-	transition: all 0.69s !important;
-	transition-delay: 1.69s;
+	transition: all 503.783ms ease 266.012ms;
+	/* * OLD animationz below | NEW animationz above! 3-1-20 */
+	/* transition: all 0.69s !important; */
+	/* transition-delay: 1.69s; */
 	z-index: 10;
 }
 
 #header:not(.toolbar):hover {
 	transform: translateY(0);
 	/*! or 34 px*/
-	transition-delay: 2.69s;
+	transition-delay: 0.69s;
 	z-index: 6;
 }
 
 /* ! Window behavior */
 
 #browser:not(.maximized):not(.popup) #header:hover {
-	transform: translateY(-21%);
+	transform: translateY(-34%);
+	/* * was 21%  */
 	z-index: 4;
 }
 
@@ -769,7 +791,7 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 /* ? Check dis shit - 2-21-20 */
 .toolbar-addressbar.toolbar .toolbar {
 	order: 1;
-	margin-left: 5px;
+	/* margin-left: 5px; */
 }
 
 /* #addbookmarks {
@@ -887,13 +909,30 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 
 /* ~ :not(.bookmark-bar:hover) */
 .toolbar-addressbar:not(:focus-within):not(:hover) {
-	/* top: 0px !important; */
+	/* top: 0px; */
+	/* * WAS commented out (top) | WAS !important along with below (opacity) */
 	transform: translateY(-78%);
 	opacity: 0.01 !important;
 	border-radius: 10px;
-	transition: all ease-out 0.15s 0.69s !important;
+	/* transition: all ease-out 0.15s 0.69s !important; */
+	/* * Old animationz above - New below - 3-1-20 */
+	transition: all 1029.42ms ease-out 249.561ms !important;
+	/* transition: all 899.946ms ease-out 766.946ms !important; */
+	/* transition: all 512.035ms ease-out 766.946ms !important; */
+	/* transition: all 200.439ms ease-out 249.561ms !important; */
 	/* transition-delay: 1.69ms !important; */
 	/* z-index: 1 !important; */
+}
+
+/* * sliiiight delay to re-access addybar if hover not precise */
+/* ? OLD select0r below */
+/* .tabstrip:hover,
+.toolbar-addressbar:not(:focus-within):not(:hover):not(:active) {
+	*/
+/* ? NEW select0r for extension popup to recede when not focused */
+.tabstrip:hover,
+.toolbar-addressbar:not(:focus-within):not(:hover)>button:not(.button-pressed) {
+	padding-top: 42px;
 }
 
 .profile-popup {
@@ -945,14 +984,14 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 	}
 
 	40% {
-		color: var(--colorAccentBgFadedMost);
-		filter: invert(100%);
+		/* color: var(--colorAccentBgFadedMost); */
+		filter: invert(100%) color;
 		/* color: var(--colorFgAlpha); */
 	}
 
 	60% {
-		color: var(--colorAccentBgFadedMost);
-		filter: invert(100%);
+		/* color: var(--colorAccentBgFadedMost); */
+		filter: invert(100%) color;
 		/* color: var(--colorFgAlpha); */
 	}
 
@@ -1000,10 +1039,16 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 }
 
 /* ! Window Controlzzz */
+/* * Delaying header transform when window controls hovered */
+/* #header:not(#tabs-container):hover~.window-buttongroup:hover {
+	transition-delay: 1.69s;
+} */
+
 #browser.win.win10 .window-buttongroup:hover {
 	/* z-index: 1; */
-	-webkit-mask-image: none;
-	box-shadow: 1px 0px 15px 0px var(--colorBgAlpha) !important;
+	-webkit-mask-image: linear-gradient(0deg, #000, #000 24px);
+	box-shadow: 1px 0px 15px 0px var(--colorBgAlpha);
+	/* WAS IMPORTANT above */
 }
 
 #browser.win.win10 .window-buttongroup {
@@ -1016,6 +1061,8 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 	fill: rgba(255, 255, 255, 0.56);
 }
 
+/* * Fix for glyph thing  */
+/*
 .window-minimize:hover {
 	fill: #fff;
 }
@@ -1023,11 +1070,12 @@ div#browser.maximized>div#header~.window-buttongroup:hover {
 .window-maximize:hover {
 	fill: #fff;
 }
-
+*/
 
 /* ! Tab close animation thingy */
 .close:not(.vivaldi-tree):not(.tree-row) {
-	z-index: 1;
+	/* z-index: 1; < 1 covers all */
+	z-index: 2;
 	/* position: relative; */
 	font-size: inherit;
 	font-family: inherit;
@@ -1121,6 +1169,11 @@ button.window-minimize:hover {
 }
 */
 /* !Window Distinctionz */
+/* #browser:not(.maximized):not(.popup)~:not(#header):not(:hover),
+.newtab {
+	transform: translateY(20%) !important;
+	transition: 0.69s;
+} */
 
 :not(#browser.win.maximized) .toolbar-addressbar {
 	max-width: 100% !important;
@@ -1157,6 +1210,32 @@ button.window-minimize:hover {
 	padding-top: 8px;
 }
 
+/*
+#browser.normal:not(.popup):not(.maximized) .window-buttongroup:not(:hover) {
+	transform: translateY(18%);
+}
+*/
+/* * Extra room to hover on tabz */
+/* #browser.normal:not(.popup):not(.maximized) #header:not(:hover) .tab:not(:hover).active { */
+#browser.normal:not(.popup):not(.maximized) #header .tab.active {
+	padding-bottom: 36px !important;
+	transition: 0.69s;
+}
+
+#browser.normal:not(.popup):not(.maximized) #header .window-buttongroup {
+	transform: translateY(5px);
+}
+
+/*
+#browser.win:not(.maximized):not(.popup) .newtab {
+	top: 13px !important;
+} */
+
+/* #browser:not(.maximized):not(.popup) :not(#header):not(:hover)>.tab.active:hover {
+	padding-bottom: 36px;
+	transition: 0.69s;
+} */
+
 /* :not(#browser.win.maximized) #tabs-Container {
 	transform: translateY(-15%);
 } */
@@ -1189,19 +1268,22 @@ button.window-minimize:hover {
 
 #header:hover #titlebar .window-buttongroup {
 	/* height: 27px; */
-	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+	-webkit-filter: drop-shadow(-2px 1px 1px rgba(0, 0, 0, 0.7));
 	box-shadow: none;
+	transition: 0.69s;
 }
 
 #header #titlebar .window-buttongroup button {
 	/* height: 27px; */
 	fill: #323232fe;
 	background-color: var(--colorAccentBgAlpha);
+	transition: 0.69s;
 }
 
 .window-buttongroup {
 	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
 	box-shadow: -1px 7px 18px 4px var(--colorBgAlpha);
+	transition: 0.69s;
 	pointer-events: all;
 	z-index: 1 !important;
 }
@@ -1209,14 +1291,21 @@ button.window-minimize:hover {
 .window-buttongroup:hover {
 	/* box-shadow: none; */
 	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+	transition: 0.69s 2.69s;
+}
+
+button.window-minimize {
+	border-bottom-left-radius: 10px !important;
 }
 
 .sync-and-trash-container {
 	pointer-events: all;
+	transition: 0.69s;
 }
 
 .sync-and-trash-container:hover {
 	fill: var(--colorAccentBGAlpha);
+	transition: 0.69s;
 }
 
 /* ! Popup Window Header Adjustmentz */
@@ -1231,10 +1320,12 @@ button.window-minimize:hover {
 	background: none !important;
 	transform: translateY(-10px) !important;
 	padding-bottom: 6px !important;
+	transition: 0.69s;
 }
 
 #browser.popup #header:hover {
 	transform: translateY(0) !important;
+	transition: 0.69s;
 }
 
 /* ! MOAR */
@@ -1242,6 +1333,15 @@ button.window-minimize:hover {
 #browser.normal:not(.popup) #header:not(:hover) {
 	transform: translateY(-10px) !important;
 	-webkit-mask-image: linear-gradient(0deg, #0000, #000);
+	transition: 0.69s;
+	/* transition: all 1s linear; */
+}
+
+#browser.normal:not(.popup):not(.maximized) #header:not(:hover) {
+	transform: translateY(-120%) !important;
+	/* * Also 32px can wurk */
+	-webkit-mask-image: none;
+	transition: 0.69s;
 	/* transition: all 1s linear; */
 }
 
@@ -1261,11 +1361,15 @@ button.window-minimize:hover {
 }
 
 .extension-popup.top {
-	margin-top: 33px !important;
+	margin-top: 33px;
 	left: unset !important;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+}
+
+#main>div.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large>div.extension-popup.top {
+	margin-top: 0px !important;
 }
 
 .toolbar-addressbar:not(.search) .addressfield-popup-container .addressfield-popup {
@@ -1393,7 +1497,7 @@ span.item-count {
 }
 
 #panels button:not(.active):hover {
-	background-color: var(--colorAccentBg) !important;
+	background-color: var(--colorAccentBg);
 }
 
 #panels-container.overlay:not(.switcher):not(.addwebpanel-wrapper):not(.addwebpanelcallout) #panels:not(:hover):not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
@@ -1524,25 +1628,51 @@ button.panelbtn:not(.active):hover :not(.tabs).button-badge {
 } */
 
 #browser:not(.mac) *::-webkit-scrollbar-track {
-	background-color: transparent !important;
+	background-color: transparent;
 }
 
 
 #browser:not(.mac) *::-webkit-scrollbar-thumb {
-	background-color: var(--colorAccentBgAlphaHeavy) !important;
+	background-color: var(--colorAccentBgAlphaHeavy);
 }
 
 #browser:not(.mac) *::-webkit-scrollbar-thumb:hover {
-	background-color: var(--colorAccentBgDark) !important;
+	/* background-color: var(--colorAccentBgDark); */
+	background: linear-gradient(0deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy));
+	animation-name: shepard;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
 }
 
 #browser:not(.mac) *::-webkit-scrollbar-thumb:active {
-	background-color: var(--colorAccentBgDarker) !important;
+	background-color: var(--colorAccentBgDarker);
 }
 
 #browser:not(.mac) *::-webkit-scrollbar {
 	/* display: none; */
-	width: 4px !important;
+	width: 4px;
+}
+
+/*
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(0deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy));
+	animation-name: shepard;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+*/
+@keyframes shepard {
+	0% {
+		background-position: bottom;
+	}
+
+	50% {
+		background-position: center;
+	}
+
+	100% {
+		background-position: top;
+	}
 }
 
 /* Scrollbar for internal pages */
@@ -1693,9 +1823,12 @@ button.panelbtn:not(.active):hover :not(.tabs).button-badge {
 }
 
 /* ! Hide Favicon if audio icon overlay exists */
+/* * Trying some fancy translations - 3-4-20 */
+/*
 #tabs-container .tab:not(.pinned):not(.tab-small).audio-on .favicon {
 	visibility: hidden !important;
 }
+*/
 
 /* ? Favicon adjustment in SiteInfo */
 #main>div.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield>button>div>img {

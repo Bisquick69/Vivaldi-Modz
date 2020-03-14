@@ -39,13 +39,13 @@
 	opacity: 0.69 !important;
 }
 
-.toolbar-statusbar:not(:focus-within):not(:hover) {
+.toolbar-statusbar:not(.toolbar-medium):not(:focus-within):not(:hover) {
 	height: 12px;
 	background: transparent !important;
 	transition: 0.15s 0.4s !important;
 }
 
-.toolbar-statusbar:not(:focus-within):not(:hover) :not(.status-info) {
+.toolbar-statusbar:not(.toolbar-medium):not(:focus-within):not(:hover) :not(.status-info) {
 	opacity: 0;
 	transition: opacity 0s 0.55s !important;
 }
@@ -56,6 +56,9 @@
 	font-family: 'Bahnschrift',
 		system-ui,
 		sans-serif !important;
+	text-align: center;
+	/* -webkit-mask-image: -webkit-linear-gradient(180deg, #0000 0, #fff 12px); */
+	/* -webkit-mask-position: top right; */
 }
 
 .StatusInfo--Visible {
@@ -101,4 +104,28 @@
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	transition: opacity 690ms;
+}
+
+/* ! PANEL STATUSBAR/TOOLBAR */
+
+.toolbar.toolbar-medium.toolbar-statusbar:not(:hover) {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	transition: 1.69s;
+	background: linear-gradient(180deg, var(--colorAccentBgDarker), #000);
+	opacity: 0 !important;
+}
+
+.toolbar.toolbar-medium.toolbar-statusbar:hover {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	opacity: 1 !important;
+}
+
+.zoom-out.button-toolbar.mod-panel-action {
+	border-top-left-radius: 8px;
+}
+
+.panel-action-search-text.button-toolbar.mod-panel-action {
+	border-top-right-radius: 8px;
 }

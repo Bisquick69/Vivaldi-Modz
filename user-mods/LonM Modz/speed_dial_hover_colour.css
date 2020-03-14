@@ -1,0 +1,48 @@
+/* Fancy Colour Highlighting Dials */
+.speeddial .draggable.dial {
+	-webkit-filter: grayscale(100%) brightness(80%);
+}
+.speeddial .draggable.dial:hover {
+	-webkit-filter: brightness(100%);
+	animation-name: pulsey;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	transition: all ease-in-out 1.69s;
+}
+
+/* ! Adding dis 9-20-19 cuz looky bettur */
+.toolbar-default:not(.no-top-padding, .find-in-page) {
+	padding-top: 32px;
+}
+
+@keyframes pulsey {
+	0% {
+		/* background-color: var(--colorAccentBgDarker); */
+		-webkit-filter: grayscale(100%);
+	}
+
+	25% {
+		/* background-color: var(--colorAccentBgFadedMost); */
+		/* color: var(--colorFgAlpha); */
+		-webkit-filter: grayscale(50%);
+	}
+
+	50% {
+		/* background-color: var(--colorAccentBgFadedMost); */
+		/* color: var(--colorFgAlpha); */
+		-webkit-filter: grayscale(0%);
+	}
+
+	75% {
+		-webkit-filter: grayscale(50%);
+	}
+
+	100% {
+		/* background-color: var(--colorAccentBgDarker); */
+		-webkit-filter: grayscale(100%);
+	}
+}
+
+.startpage .startpage-drawer section.drawer-suggestions {
+	overflow-y: overlay !important;
+}

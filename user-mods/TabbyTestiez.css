@@ -6,6 +6,11 @@
 	background: linear-gradient(180deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy)) !important;
 }
 
+/* ? Testiez for delay on windowbuttonz */
+#browser.tabs-top #header:hover .tab-strip:not(:hover) .window-buttongroup:not(:hover) {
+	transition-delay: 1.69s;
+}
+
 #browser.tabs-top .tab:not(.active):hover {
 	transform: translateY(0);
 	transition: transform 0.69ms !important;

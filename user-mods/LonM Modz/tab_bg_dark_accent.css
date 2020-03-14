@@ -1,0 +1,6 @@
+/* Use Dark BG Background tabs */
+.tab:not(.active) {
+	background: var(--colorAccentBgDarker) !important;
+	/* width: 100%;
+	max-width: fit-content; */
+}
