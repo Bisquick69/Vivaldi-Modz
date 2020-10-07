@@ -1,0 +1,24 @@
+.manager .manager-content,
+.vivaldi-tree,
+.manager>.toolbar,
+.startpage .history .more-info {
+    background-color: var(--colorBgDark) !important;
+    opacity: .98;
+    backdrop-filter: blur(10px)
+}
+
+/* Creates alternating row colors */
+.vivaldi-tree div>div:nth-child(even),
+.manager .manager-treeview div>div:nth-child(even),
+.startpage .history .manager-content .history-tree div>div:nth-child(even) {
+    background-color: var(--colorBg);
+}
+
+.manager .manager-editor {
+    border: none !important
+}
+
+.panel#downloads .download-item .file,
+.panel#downloads .download-item .file .size {
+    background-color: transparent;
+}

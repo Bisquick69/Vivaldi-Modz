@@ -1,0 +1,67 @@
+/* ! If you want to maximize the webpage display estate without disabled the panel completely (or enabled the panel toggle), you can use this CSS mod to shrink the switch to the window's top corner (8px X 50px) when the panel is hidden & inactive: */
+
+/*
+#panels-container.overlay {
+    width: 0 !important;
+}
+
+#panels-container.right.icons:not(.overlay) {
+    margin-left: -34px;
+}
+
+#panels-container.left.icons:not(.overlay) {
+    margin-right: -34px;
+}
+
+#panels-container #switch {
+    z-index: 1;
+    max-width: 34px;
+    height: 100%;
+}
+
+#panels-container.icons:not(:hover) #switch {
+    opacity: 0;
+    max-width: 8px;
+    height: 50px;
+    transition: .1s .9s, opacity 0s 1s !important;
+}
+*/
+
+/* ! Shrink to middle section, replace last 2 lines with this:  */
+
+/*
+#panels-container #switch {
+    z-index: 1;
+    max-width: 34px;
+    height: 100%;
+    top: 0;
+}
+
+#panels-container.icons:not(:hover) #switch {
+    opacity: 0;
+    max-width: 8px;
+    height: 50px;
+    top: calc(50% - 25px);
+    transition: .1s .9s, opacity 0s 1s !important;
+}
+*/
+
+/* ! Shrink to bottom corner, replace last 2 lines with this:  */
+/*
+#panels-container #switch {
+    z-index: 1;
+    max-width: 34px;
+    height: 100%;
+    top: 0;
+}
+
+#panels-container.icons:not(:hover) #switch {
+    opacity: 0;
+    max-width: 8px;
+    height: 50px;
+    top: calc(100% - 50px);
+    transition: .1s .9s, opacity 0s 1s !important;
+}
+*/
+
+/* ? Instructions: You can summon the panels with keyboard shortcut, or move the pointer to the edge of the window/screen (top/middle/bottom). The switch will autohide after 1 second of inactivity when panels are hidden, & you still can drag & drop web content into the shrunken switch. You can resize the shrunken switch by changing the 50px & 25px value in the last line. Please note that shrunken switch could interfere with webpage's scrollbar, thus it's best to keep it as small as possible. You can change the transparency of shrunken switch by changing opacity between .1 & .9. Default 0 is completely invisible. This CSS mod works really well with mbuch's autohide panel js mod.  */

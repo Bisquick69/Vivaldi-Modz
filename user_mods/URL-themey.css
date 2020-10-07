@@ -1,0 +1,137 @@
+/* URL colour */
+.UrlFragment-Wrapper,
+.UrlFragment--Lowlight:first-of-type {
+    color: var(--colorFgFaded);
+    margin-right: 2px;
+}
+
+/* URL Base-domain  */
+/* ? WAS .UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD { */
+.UrlFragment-HostFragment-Basedomain {
+    color: var(--colorFgIntense);
+    font-weight: bold;
+    /* ! ADDED DIS */
+    background-color: var(--colorAccentBg);
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 2px;
+    padding-top: 1px;
+    /*     border-radius: var(--radiusRoundedLess); */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.UrlFragment-HostFragment-TLD {
+    background-color: var(--colorBgFaded);
+    opacity: 0.69;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 11px;
+    /*     border-radius: var(--radiusRoundedLess); */
+    border-radius: 4px;
+}
+
+.UrlField:not(:hover) .UrlFragment-HostFragment-TLD {
+    display: none;
+    /* visibility: collapse; */
+    /* margin-left: -35px; */
+}
+
+/* URL Sub-domain */
+.UrlFragment-HostFragment-Subdomain {
+    /*     color: var(--colorHighlightBg) !important; */
+    font-weight: bold;
+    background-color: var(--colorBgFaded);
+    opacity: 0.69;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: var(--radiusRoundedLess);
+}
+
+/* * --------------------------------------------- * */
+
+/* ? Example Ish: .UrlFragment-HostFragment-Subdomain:not([data-content="www."]) */
+
+.UrlFragment--Highlight:is([data-content="/"]) {
+    color: yellow;
+    /* OR */
+    /* color: var(--HighlightColor); */
+}
+
+.UrlFragment--Lowlight {
+    user-select: text;
+    transition: 0.25s;
+    border-radius: 4px;
+}
+
+.UrlField:not(:hover) .UrlFragment--Lowlight:first-child {
+    /*     display: none; */
+    margin-left: -35px;
+    align-content: center;
+    transition: 0.25s 0.25s;
+    visibility: collapse;
+    /* color:transparent; */
+}
+
+.UrlField:not(:hover) .UrlFragment--Lowlight:not(:last-child) {
+    /*     display: none; */
+    /*     visibility: hidden; */
+    /*     margin-left: -75px; */
+    /*     margin-top:5px; */
+    /*     align-content: center; */
+    /*     transform:translateY(-5px) !important; */
+    font-size: 11px;
+    transition: 0.25s;
+    /*     max-width: 0px; */
+}
+
+.UrlFragment--Lowlight:not(:first-child) {
+    visibility: visible;
+    background-color: var(--colorBgFaded);
+    opacity: 0.69;
+    margin-right: 5px;
+    /*     margin-left:-2px; */
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+    /*     border-radius: var(--radiusRoundedLess); */
+    transition: 0.25s;
+}
+
+.UrlField:hover .UrlFragment--Lowlight {
+    visibility: visible;
+    /*     background-color: var(--colorBgFaded); */
+    opacity: 1;
+    padding: 0px 3px 1px 1px;
+    border-radius: 4px;
+    /*     border-radius: var(--radiusRoundedLess); */
+    transition: 0.25s;
+}
+
+.UrlFragment--Lowlight:last-child {
+    color: black;
+    border: 1px solid var(--colorAccentBg);
+    padding: 0px 4px 1px;
+    border-radius: 4px;
+    letter-spacing: 0.69px;
+    background-color: var(--HighlightColor);
+}
+
+.UrlField:hover {
+    transform: scale(0.85) translate(-9%, 0px);
+    overflow: visible;
+    width: 120%;
+    -webkit-mask-image: linear-gradient(90deg, #000 95%, #0000);
+}
+
+.UrlField:not(:hover) {
+    /*     content: ""; */
+    transition: 0.25s 0.45s;
+}
+
+.UrlField {
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, #0000);
+}

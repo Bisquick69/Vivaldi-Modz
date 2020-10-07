@@ -1,0 +1,41 @@
+#panels-container:not(:hover) .panel-group:not(:hover) {
+    /* 	transform: translateX(-98%); */
+    /*     width: 10px !important; */
+    /*     transition: 0.69s 4s, opacity 0.69s 4s; */
+    transition: 0.69s 4s;
+    opacity: 0.25 !important;
+}
+
+#panels-container:not(:hover) {
+    transform: translateX(-98%);
+    /*     transition: 0.69s 4s, opacity 0.69s 4s; */
+    transition: 0.69s 4s;
+}
+
+/* * ADDED DIS - 9/29/20 * */
+
+#panels-container.overlay:not(.switcher) #panels:not(:hover) {
+    transform: translateX(-98%);
+    transition: 0.69s 4s;
+}
+
+#panels-container:hover #panels:hover {
+    transition: 0.69s 1s;
+}
+
+#panel_switch:not(:hover) :not(#panels-container) {
+    opacity: 0 !important;
+    padding-right: 8px;
+    margin-left: -10px;
+    transition: 0.69s;
+}
+
+#panels-container:hover #panel_switch:not(:hover)~ :not(#panels-container) {
+    transform: translateX(-9px);
+    transition: 0.69s;
+    z-index: 999999999;
+}
+
+#panel_switch {
+    transition: 0.69s;
+}

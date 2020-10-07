@@ -1,0 +1,60 @@
+/*
+Addressfield theming
+https://forum.vivaldi.net/topic/45260/addressfield-theming
+Changes the color of the certified siteinfo button, the icons for blocked content and the bookmark button on non-private windows. Reverts desing of private windows to standard window.
+*/
+
+
+.SiteInfoButton.certified {
+    fill: var(--colorHighlightBgDark);
+    color: var(--colorHighlightBg);
+}
+.SiteInfoButton.certified:hover, .SiteInfoButton.certified:focus:not([tabindex='-1']), .SiteInfoButton.certified:active {
+    fill: var(--colorHighlightBg);
+}
+.bookmark-animated-fill, .theme-dark .bookmark-animated-fill {
+    fill: var(--colorFg);
+}
+.permission-denied circle {
+    fill: var(--colorHighlightBg);
+}
+.permission-denied path {
+    fill: var(--colorHighlightFg);
+}
+.private .toolbar-addressbar .addressfield,
+.private .toolbar-addressbar .searchfield {
+    background-color: var(--colorBgIntenser);
+    border-color: var(--colorBgIntenser);
+    color: var(--colorFg);
+}
+.private.color-behind-tabs-on .addressfield, .private.color-behind-tabs-on .searchfield {
+    border-color: var(--colorBorder)
+}
+.private .addressfield:focus-within, .private .searchfield:focus-within {
+    border-color: var(--colorAccentBgFadedMost);
+}
+.private.color-behind-tabs-on .addressfield:focus-within, .private.color-behind-tabs-on .searchfield:focus-within {
+    box-shadow: 0 0 0 1px var(--colorBorderHighlight) inset;
+    border-color: var(--colorBorderHighlight);
+}
+.private .toolbar-addressbar .addressfield button:not(.fullheight):hover,
+.private .toolbar-addressbar .searchfield button:not(.fullheight):hover {
+    border-color: var(--colorBorder);
+    background-color: var(--colorBgIntenser);
+    fill: inherit;
+}
+.private .addressfield .pageload.progressing .pageload-ticker {
+    color: inherit;
+}
+.private .addressfield .pageload .pageload-indicator {
+    opacity: 0.25;
+}
+.private .addressfield .pageload .pageload-indicator::-webkit-progress-value {
+    background-color: var(--colorBgIntenser);
+}
+.addressfield .private-window-indicator {
+    background-color: var(--colorFg);
+}
+.addressfield .private-window-indicator > svg {
+    fill: var(--colorBg);
+}

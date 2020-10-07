@@ -1,0 +1,21 @@
+setTimeout(function wait () {
+    const browser = document.getElementById('browser');
+    if (browser) {
+        const toolbarExtensions = document.querySelector('.toolbar-extensions');
+        const addressbar = document.querySelector('.toolbar-addressbar');
+        const statusbar = document.querySelector('.toolbar-statusbar');
+
+        document.querySelector('.addwebpanel-wrapper').prepend(toolbarExtensions);
+
+        statusbar.addEventListener('mouseover', () => {
+            addressbar.classList.add('show-addressbar');
+        });
+
+        statusbar.addEventListener('mouseout', () => {
+            addressbar.classList.remove('show-addressbar');
+        });
+    }
+    else {
+        setTimeout(wait, 300);
+    }
+}, 300);

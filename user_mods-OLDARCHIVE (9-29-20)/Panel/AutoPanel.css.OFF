@@ -1,0 +1,68 @@
+/* Sidepanel settings */
+#panels-container.overlay.left,
+#panels-container.overlay.right {
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    /*transition-property: opacity;
+   transition-duration: .05s .05s;*/
+    transition: transform .05s linear .05s, opacity .05s linear .05s;
+}
+
+#panels-container.overlay.right {
+    right: 0px;
+}
+
+#panels-container.overlay.left:not(:hover) {
+    transform: translateX(-28px);
+    opacity: 0.15;
+    transition-property: transform, opacity;
+    transition-duration: .2s, .2s;
+    transition-delay: .2s !important;
+}
+
+#panels-container.overlay.right:not(:hover) {
+    transform: translateX(28px);
+    opacity: 0.2;
+    transition-property: transform, opacity;
+    transition-duration: .2s, .2s;
+    transition-delay: .2s !important;
+}
+
+
+/*Addressbar settings*/
+.toolbar-addressbar {
+    visibility: visible;
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .1s linear .1s, visibility 0s linear 1s, top .2s linear, filter .1s linear .1s;
+}
+
+#header:hover~#main .toolbar-addressbar,
+.toolbar-addressbar:hover,
+.toolbar-addressbar:focus-within,
+.toolbar-addressbar:focus {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    opacity: .60;
+}
+
+.toolbar-addressbar:focus-within,
+.toolbar-addressbar:hover,
+.toolbar-addressbar:focus {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+    filter: drop-shadow(0 1mm 4mm #000000);
+}

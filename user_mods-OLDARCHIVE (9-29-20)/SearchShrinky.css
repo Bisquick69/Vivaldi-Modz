@@ -1,0 +1,133 @@
+@keyframes Xpand {
+	0% {
+		transform: width(26px);
+	}
+
+	50% {
+		transform: width(75px);
+	}
+
+	100% {
+		transform: width(175px);
+	}
+}
+
+/* ! A. Always shrink it regardless of window size: */
+
+/* tiny searchbox */
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover) {
+	min-width: 26.5px;
+	max-width: 26.5px;
+	transition: .5s ease-in-out !important;
+}
+
+.UrlBar-SearchField:hover,
+.UrlBar-SearchField:focus-within {
+	max-width: 69px;
+	transition: 0.45s;
+}
+
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover)>.searchfield-input {
+	margin-left: -27px;
+	opacity: 0;
+	z-index: 1;
+}
+
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover)>.toolbar-insideinput:last-child {
+	visibility: hidden;
+}
+
+/* - OLD MEANS -
+.toolbar-addressbar .searchfield:not(:focus-within):not(:hover) {
+	max-width: 26px;
+	min-width: 26px !important;
+	/* display: unset; */
+/*
+	overflow: hidden;
+*/
+/* transition: transform 1.69s ease 1.69s; */
+/*
+	transition: 1.69s;
+	transition-delay: 0.69s;
+}
+*/
+
+/* ! B. Only shrink it in normal window, cuz space is abundant when maximized: */
+
+/* tiny searchbox */
+/*
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover) {
+	min-width: 26.5px;
+	max-width: 26.5px;
+	transition: .5s ease-in-out !important;
+}
+
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover)>.searchfield-input {
+	margin-left: -27px;
+	opacity: 0;
+	z-index: 1;
+}
+
+.UrlBar .UrlBar-SearchField:not(:focus-within):not(:hover)>.toolbar-insideinput:last-child {
+	visibility: hidden;
+}
+*/
+
+/* - OLD MEANS -
+#browser:not(.maximized) .toolbar-addressbar .searchfield:not(:focus-within):not(:hover) {
+	max-width: 26px;
+	min-width: 26px !important;
+*/
+/* display: unset; */
+/*
+	overflow: hidden;
+*/
+/* transition: transform 1.69s ease 1.69s; */
+/*
+	transition: 1.69s;
+}
+*/
+/*
+.searchfield:hover,
+.searchfield:focus-within {
+	max-width: 69px;
+	transition: 0.45s;
+*/
+/* transition: transform 1.69s ease 1.69s; */
+/* transition-delay: 6900ms; */
+/* transform: max-width(175px); */
+}
+
+/*  * NEW SEARCH THINGY - 4-11-20 */
+/* .button-pressed */
+/*
+#main>.UrlBar-SearchField>div.button-toolbar.ck8vno1vv00g6395xdybcl3tv>button {
+	border-bottom-left-radius: 10px !important;
+	border-bottom-right-radius: 0 !important;
+	margin: 0 0 -41px 0;
+	padding-bottom: 6px;
+}
+
+.SearchField-Popup {
+	right: 0;
+	left: 106px;
+	height: 34px;
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	font-size: 13px;
+	background-color: var(--colorAccentBgDark);
+}
+
+.SearchField-Popup .button-popup-wrapper {
+	background-color: var(--colorAccentBgDark);
+	overflow: unset;
+	padding-bottom: 10px;
+}
+
+#main>.UrlBar-SearchField>div.button-toolbar.ck8vno1vv00g6395xdybcl3tv>div>div>div>div>input {
+	border-left: inset 1px var(--colorAccentBgAlpha) !important;
+	padding-left: 8px !important;
+}
+*/

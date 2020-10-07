@@ -1,0 +1,75 @@
+/* URL colour */
+.UrlFragment-Wrapper,
+.UrlFragment--Lowlight:first-of-type {
+    color: var(--colorFgFaded);
+}
+
+/* URL Base-domain  */
+/* ? WAS .UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD { */
+.UrlFragment-HostFragment-Basedomain {
+    color: var(--colorFgIntense) !important;
+    font-weight: bold;
+    /* ! ADDED DIS */
+    background-color: var(--colorAccentBg);
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: var(--radiusRoundedLess);
+}
+
+.UrlFragment-HostFragment-TLD {
+    background-color: var(--colorBgFaded);
+    opacity: 0.69;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: var(--radiusRoundedLess);
+}
+
+/* URL Sub-domain */
+.UrlFragment-HostFragment-Subdomain {
+    /* color: var(--colorHighlightBg) !important;
+    font-weight: bold; */
+    background-color: var(--colorBgFaded);
+    opacity: 0.69;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: var(--radiusRoundedLess);
+}
+
+/* * --------------------------------------------- * */
+
+.UrlFragment--Lowlight::first-letter:nth-of-type(3) {
+    color: transparent;
+    /* OR */
+    /* color: var(--HighlightColor); */
+}
+
+.UrlFragment--Lowlight {
+    user-select: all;
+}
+
+.UrlFragment--Lowlight:is(:nth-of-type(1)):not(:hover) {
+    display: none;
+    margin-left: -20px;
+    /* visibility: hidden; */
+    /* color:transparent; */
+}
+
+.UrlFragment--Lowlight:nth-of-type(2) {
+    display: none;
+}
+
+.UrlFragment--Lowlight:nth-of-type(3) {
+    color: black;
+    border: 1px solid var(--colorAccentBg);
+    padding: 1px 4px;
+    border-radius: 4px;
+    letter-spacing: 0.69px;
+    background-color: var(--HighlightColor);
+}
+
+.UrlField {
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, #0000);
+}

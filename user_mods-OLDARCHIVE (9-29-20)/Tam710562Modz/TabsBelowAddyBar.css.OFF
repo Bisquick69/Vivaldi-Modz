@@ -1,0 +1,43 @@
+/* Tabs Below Address Bar for 3.3 */
+
+/* Please remember that you still need to set
+ * tab position to bottom in Vivaldi settings
+ * for this mod to work at all. */
+
+#tabs-container.bottom {
+    order: -1;
+    border-top: none;
+    padding-top: var(--padding);
+    padding-bottom: 0px !important;
+}
+
+.address-top .UrlBar:after {
+    background-color: transparent !important;
+}
+
+/* Bookmarks bar above tabs */
+.bookmark-bar {
+    order: -2;
+}
+
+.toolbar.UrlBar {
+    order: -3;
+}
+
+/* Tabs corner rounding */
+.tabs-bottom .tab-position .tab {
+    border-top-left-radius: var(--radiusHalf);
+    border-top-right-radius: var(--radiusHalf);
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+/* tab group indicators*/
+.tabs-bottom .tab-strip .tab-group-indicator {
+    bottom: 28px !important;
+}
+
+/* NewTab button hide */
+.newtab {
+    display: none;
+}

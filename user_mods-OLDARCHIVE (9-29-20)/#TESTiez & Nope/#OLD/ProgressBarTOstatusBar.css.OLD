@@ -1,0 +1,112 @@
+/* optional: pageload gauge indicator */
+@keyframes loading {
+	50% {
+		transform: scaleX(-1);
+	}
+}
+.addressfield .pageload.progressing .pageload-indicator:after {
+	content: "";
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 4px;
+	-webkit-background-size: 100vw;
+	background-image: repeating-linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.4),
+		rgba(255, 255, 255, 0.4) 8px,
+		transparent 8px,
+		transparent calc(10vw - 8px),
+		rgba(0, 0, 0, 0.2) calc(10vw - 8px),
+		rgba(0, 0, 0, 0.2) 10vw,
+		rgba(255, 255, 255, 0.2) 10vw,
+		rgba(255, 255, 255, 0.2) calc(10vw + 8px),
+		transparent calc(10vw + 8px),
+		transparent calc(20vw - 8px),
+		rgba(0, 0, 0, 0.4) calc(20vw - 8px),
+		rgba(0, 0, 0, 0.4) 20vw
+	);
+	animation: loading 1s steps(1) infinite !important;
+}
+
+/* move progress bar to bottom */
+/* pageload indicator */
+.addressfield .pageload:not(.unstarted).progressing .pageload-indicator {
+	position: fixed;
+	z-index: 99;
+	top: unset;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100vw;
+	border-radius: 0;
+	background: transparent;
+	opacity: 1 !important;
+}
+
+/* custom background color n redraw speed */
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator::-webkit-progress-value {
+	background: transparent;
+	transition: width 0.3s, background-color 0.1s !important;
+}
+
+/* color changes base on loading % */
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="0"]::-webkit-progress-value {
+	background: maroon !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="1"]:not([value="1"]):not([value="100"])::-webkit-progress-value {
+	background: firebrick !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="2"]:not([value="2"])::-webkit-progress-value {
+	background: orangered !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="3"]:not([value="3"])::-webkit-progress-value {
+	background: darkorange !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="4"]:not([value="4"])::-webkit-progress-value {
+	background: orange !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="5"]:not([value="5"])::-webkit-progress-value {
+	background: gold !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="6"]:not([value="6"])::-webkit-progress-value {
+	background: greenyellow !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="7"]:not([value="7"])::-webkit-progress-value {
+	background: limegreen !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="8"]:not([value="8"])::-webkit-progress-value {
+	background: dodgerblue !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value^="9"]:not([value="9"])::-webkit-progress-value {
+	background: blue !important;
+}
+.addressfield
+	.pageload:not(.unstarted).progressing
+	.pageload-indicator[value="100"]::-webkit-progress-value {
+	background: RGBA(255, 0, 255, 0.3) !important;
+}

@@ -1,0 +1,330 @@
+/* --------------------- URL ISH ---------------------- */
+/*
+.UrlBar-AddressField,
+.UrlBar-SearchField,
+.UrlBar-AddressField:active {
+    border: 0 none !important;
+    background-color: transparent !important
+}
+
+.UrlBar-AddressField:focus-within,
+.UrlBar-SearchField:focus-within {
+    border: 0 none !important;
+    box-shadow: none !important
+}
+*/
+
+/* Remove border around tab favicon */
+.theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg) {
+    filter: none !important;
+}
+
+/* ? Addressfield theming - 7/23/20 * */
+
+.SiteInfoButton.certified,
+.SiteInfoButton.secure {
+    /* fill: var(--colorHighlightBgDark); */
+    fill: var(--colorAccentBg);
+    color: var(--colorHighlightBg);
+}
+
+.SiteInfoButton.certified:hover,
+.SiteInfoButton.certified:focus:not([tabindex='-1']),
+.SiteInfoButton.certified:active,
+.SiteInfoButton.secure:hover,
+.SiteInfoButton.secure:focus:not([tabindex='-1']),
+.SiteInfoButton.secure:active {
+    fill: var(--colorHighlightBg);
+}
+
+.bookmark-animated-fill,
+.theme-dark .bookmark-animated-fill {
+    fill: var(--colorFg);
+}
+
+.permission-denied circle {
+    fill: var(--colorHighlightBg);
+}
+
+.permission-denied path {
+    fill: var(--colorHighlightFg);
+}
+
+.private .UrlBar .addressfield,
+.private .UrlBar .UrlBar-SearchField {
+    background-color: var(--colorBgIntenser);
+    border-color: var(--colorBgIntenser);
+    color: var(--colorFg);
+}
+
+.private.color-behind-tabs-on .addressfield,
+.private.color-behind-tabs-on .UrlBar-SearchField {
+    border-color: var(--colorBorder)
+}
+
+.private .addressfield:focus-within,
+.private .UrlBar-SearchField:focus-within {
+    border-color: var(--colorAccentBgFadedMost);
+}
+
+.private.color-behind-tabs-on .addressfield:focus-within,
+.private.color-behind-tabs-on .UrlBar-SearchField:focus-within {
+    box-shadow: 0 0 0 1px var(--colorBorderHighlight) inset;
+    border-color: var(--colorBorderHighlight);
+}
+
+.private .UrlBar .addressfield button:not(.fullheight):hover,
+.private .UrlBar .UrlBar-SearchField button:not(.fullheight):hover {
+    border-color: var(--colorBorder);
+    background-color: var(--colorBgIntenser);
+    fill: unset;
+}
+
+.private .SiteInfoButton.secure {
+    fill: var(--colorHighlightBgDark);
+}
+
+.private .SiteInfoButton.secure:hover {
+    fill: var(--colorHighlightBg) !important;
+}
+
+.private .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.button-toolbar button.button-pressed,
+.private .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.toolbar-group>.button-toolbar button.button-pressed {
+    background-color: var(--colorBg);
+    border-color: var(--colorBgDarker);
+    color: var(--colorFg);
+}
+
+.private .addressfield .pageload.progressing .pageload-ticker {
+    color: inherit;
+}
+
+.private .addressfield .pageload .pageload-indicator {
+    opacity: 0.25;
+}
+
+.private .addressfield .pageload .pageload-indicator::-webkit-progress-value {
+    background-color: var(--colorBgIntenser);
+}
+
+.addressfield .private-window-indicator {
+    background-color: var(--colorFg);
+}
+
+.addressfield .private-window-indicator>svg {
+    fill: var(--colorBg);
+}
+
+/* * Slightly moar interestang hover * */
+
+.toolbar-extensions .ExtensionIcon--Hidden:hover,
+.toolbar-mainbar>.button-toolbar>button:not(.extensionPopupIcons):not(.button-pressed):hover:not([title~="Reload"]) {
+    border-radius: 50%;
+    transition: border-radius .69s !important;
+    animation: SquareDaCircle 2s both infinite !important;
+}
+
+@keyframes SquareDaCircle {
+    0% {
+        /* border-radius: initial; */
+        border-radius: 50%;
+    }
+
+    50% {
+        border-radius: 25%;
+        transform: rotate(720deg);
+    }
+
+    100% {
+        border-radius: 50%;
+    }
+}
+
+
+/* * Bookmark Manger distinctions and shiiiit - 4/11/20 */
+
+#webpage-stack>div.active.internal.visible.webpageview.pagefocusstop>div>div>div.internal-page>div>div.startpage-content>div>div>div.toolbar.toolbar-default.toolbar-medium {
+    padding: 35px 0px 8px 25px;
+}
+
+.startpage-content>input[type=search] {
+    max-width: none !important;
+    width: 250px !important;
+}
+
+/*
+:not(header)>.toolbar-default>*:not(.toolbar-nowrap):nth-child(1) {
+    margin-right: 62%;
+}
+*/
+/* ? Sorting Headerz */
+.sortselector.sortselector-compact {
+    border-color: var(--colorAccentBorderDark) !important;
+}
+
+.sortselector.sortselector-compact .sortselector-button {
+    border-left: thin solid var(--colorAccentBorderDark);
+}
+
+span.item-count {
+    background-color: var(--colorAccentBgAlpha);
+}
+
+.tree-row[data-selected]:not([data-nofocus]) .item-count {
+    background-color: var(--colorAccentBorderDark);
+}
+
+.panel .vivaldi-tree .tree-row label:hover {
+    background-color: var(--colorAccentBgAlphaHeavy);
+}
+
+.win .vivaldi-tree .tree-item[data-lead],
+.linux .vivaldi-tree .tree-item[data-lead] {
+    outline: 1px solid var(--colorAccentBgAlpha);
+    outline-offset: 0;
+}
+
+.hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] {
+    background-color: var(--colorAccentBgAlpha);
+}
+
+.hasfocus .panel#downloads .vivaldi-tree:focus-within .tree-row[data-selected] .DownloadItem-ActionButton {
+    --backgroundColor: var(--colorAccentBgAlpha) !important;
+    --foregroundColor: var(--colorAccentAlphaHeavy) !important;
+    border: 1px solid var(--colorAccentBorder) !important;
+    fill: var(--colorAccentFg) !important;
+}
+
+.hasfocus .vivaldi-tree.no-selection:focus-within:after {
+    box-shadow: inset 0 0 0 2px var(--colorAccentBgAlpha) !important;
+}
+
+button:focus:not([tabindex='-1']),
+input:focus:not([tabindex='-1']),
+select:focus:not([tabindex='-1']),
+textarea:focus:not([tabindex='-1']),
+input[type=text]:focus:not([tabindex='-1']),
+input[type=search]:focus:not([tabindex='-1']),
+input[type=password]:focus:not([tabindex='-1']),
+input[type=email]:focus:not([tabindex='-1']),
+input[type=url]:focus:not([tabindex='-1']),
+input[type=number]:focus:not([tabindex='-1']),
+input[type=radio]:focus:not([tabindex='-1']),
+input[type=date]:focus:not([tabindex='-1']),
+input[type=time]:focus:not([tabindex='-1']),
+input[type=checkbox]:focus:not([tabindex='-1']),
+input[type=button]:focus:not([tabindex='-1']),
+input[type=submit]:focus:not([tabindex='-1']) {
+    border-color: var(--colorAccentBorder) !important;
+    box-shadow: 0 2px 0 0 var(--colorAccentBorder) !important;
+}
+
+select[multiple]:focus option:checked,
+select[size]:focus option:checked {
+    color: var(--colorHighlightFg) !important;
+    background: linear-gradient(var(--colorAccentBg), var(--colorAccentBgAlpha)) !important;
+}
+
+#browser .Switch-Input:checked {
+    background-color: var(--colorAccentBg) !important;
+}
+
+input[type=button][type=submit]:active,
+input[type=submit][type=submit]:active,
+input[type=color][type=submit]:active,
+.webpage-button[type=submit]:active,
+input[type=button].primary:active,
+input[type=submit].primary:active,
+input[type=color].primary:active,
+.webpage-button.primary:active {
+    color: var(--colorAccentFg) !important;
+    background: var(--colorAccentBg) !important;
+    border-color: var(--colorAccentBorder) !important;
+}
+
+input[type=checkbox]:before,
+input[type=checkbox]:after {
+    background-color: var(--colorAccentBg) !important;
+}
+
+input[type=checkbox]:before:hover,
+input[type=checkbox]:after:hover {
+    background-color: var(--colorAccentBgDarker) !important;
+}
+
+/* #panels> :not(#window-panel) { */
+/* .panel-group:not(#switch) { */
+#panels>:not(#switch) {
+    -webkit-mask-image: linear-gradient(#0000 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001px, var(--colorAccentBg) 10px);
+}
+
+.vivaldi-tree .separator {
+    border: 0.69px groove var(--colorAccentBgFadedMore);
+}
+
+.vivaldi-tree .tree-row .close svg,
+.vivaldi-tree .tree-row .mail-status-indicator svg,
+.vivaldi-tree .folder.tree-row :not(.expand-icon) svg:not(.folder-icon) {
+    fill: var(--colorAccentBgFadedMost);
+    transition: 0.69s;
+
+    stroke: none;
+}
+
+.vivaldi-tree .folder.tree-row :is(.expand-icon) svg.folder-icon {
+    fill: var(--colorAccentBgDarker);
+    transition: 0.69s;
+}
+
+
+.vivaldi-tree .tree-row :not(.folder) .expand-icon~svg {
+    fill: var(--colorBgAlpha);
+    stroke: var(--colorAccentBgAlpha);
+    transition: 0.69s;
+}
+
+.vivaldi-tree .folder .expand-icon svg {
+    fill: var(--colorAccentBgAlpha);
+    /*   stroke: var(--colorAccentBgDark); */
+    stroke-color: var(--colorAccentBg);
+    stroke-width: initial;
+    transition: 0.69s;
+}
+
+.panel:not(:hover) .vivaldi-tree .tree-item span.item-count {
+    opacity: 0;
+    transition: 0.69s;
+}
+
+.vivaldi-tree:not(:hover) .tree-row label span.item-count {
+    opacity: 0.25;
+    transition: 0.69s;
+}
+
+.vivaldi-tree:hover .tree-row:not(:hover) label span.item-count {
+    opacity: 0.55;
+    transition: 0.69s;
+}
+
+.panel .vivaldi-tree .tree-row[data-selected][data-nofocus] label span.item-count {
+    opacity: 0.85;
+    transition: 0.69s;
+    animation-name: pulse;
+    animation-duration: 6.9s;
+    animation-iteration-count: infinite;
+}
+
+/* Other potential methodz:
+#switch .addwebpanel-wrapper>button:first-of-type,
+#switch>button:first-of-type */
+/*
+#switch>button.panelbtn.uifocusstop.bookmarks.active
+#switch:not(.addwebpanel-wrapper)>:not(.addwebpanelcallout) {
+    -webkit-mask-image: linear-gradient(#0000 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001px, var(--colorAccentBg) 10px);
+}
+.addwebpanel-wrapper {
+    -webkit-mask-image: unset !important;
+}
+#switch:not(.addwebpanel-wrapper)>:not(.addwebpanelcallout) {
+    -webkit-mask-image: linear-gradient(#0000 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001px, var(--colorAccentBg) 10px);
+} */

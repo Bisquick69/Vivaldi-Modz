@@ -1,0 +1,192 @@
+/*Auto hide bookmark bar*/
+/* .toolbar,
+#header {
+	z-index: 3;
+} */
+
+#header {
+	background: none !important;
+	pointer-events: none !important;
+}
+
+/*
+.bookmark-bar:not(:hover) {
+	transition: 0.69s;
+}
+*/
+
+/* * 8-10-20 | ADDED .toolbar-addressbar:not(:focus-within):not(:hover)>button:not(.button-pressed), to beginning to see if better functiony */
+/* .toolbar-addressbar:not(:focus-within):not(:hover)>button:not(.button-pressed), */
+.bookmark-bar {
+	position: fixed !important;
+	width: 100%;
+	transform: translateY(-100%);
+	/* transition: transform 406.823ms ease 255.809ms !important; */
+	/* transition: transform 395.132ms ease 755.971ms !important; */
+	transition: transform 395.132ms ease 755.971ms;
+	/* * OLD animationz below | NEW animationz above! 3-1-20 | 8-6-20 - took out important */
+	/* transition: transform 0.45s !important; */
+	z-index: 3;
+	/* WAS 5 */
+	/* WAS 2 */
+}
+
+.inner {
+	transition: 0.69s;
+}
+
+.bookmark-bar:hover~.inner {
+	filter: brightness(0.35) blur(1px);
+	transition: 0.69s;
+}
+
+/* ! 9-23-19 Added :-webkit-any(.native, .maximized)#browser:not(.tabs-top) to clarify not tabs-left/right */
+
+:-webkit-any(.native, .maximized)#browser.tabs-left .bookmark-bar:hover {
+	transform: translateY(205%);
+	/*! or 34 px | WAS 125%*/
+}
+
+:-webkit-any(.native, .maximized)#browser.tabs-top .bookmark-bar:hover {
+	transform: translateY(163%);
+	/*! or 34 px | WAS 125%*/
+	/* ? OLD - 148% */
+}
+
+.UrlBar+.bookmark-bar:hover .UrlBar {
+	opacity: 1 !important;
+	top: 30px !important;
+	transform: translateY(80%);
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important;
+	/* ? Adding background for accent color transition */
+}
+
+#browser.tabs-top.maximized .toolbar:hover~.bookmark-bar {
+	transform: translateY(163%);
+	/* ? OLD - 148% */
+}
+
+#browser.tabs-left .toolbar:hover~.bookmark-bar {
+	transform: translateY(205%);
+}
+
+#browser:not(.maximized).tabs-top .toolbar:hover~.bookmark-bar {
+	transform: translateY(177%);
+}
+
+#browser:not(.maximized) .bookmark-bar:hover {
+	transform: translateY(177%);
+}
+
+#browser.win.maximized #header:not(.window-buttongroup):hover~#main .UrlBar {
+	transform: translateY(80%);
+	opacity: 1 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+	padding-top: 4px;
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important;
+	/* ? Adding background for accent color transition */
+}
+
+#browser.win.maximized #header:not(.window-buttongroup):hover>#tabsContainer:hover .UrlBar {
+	top: 30px !important;
+	margin-top: 0;
+	padding-top: 4px;
+	transform: translateY(130%);
+	transition: transform 0.45s, background 1.69s, background-color 1.69s !important;
+	/* ? Adding background for accent color transition */
+}
+
+#browser.win.normal #header:not(.window-buttongroup):hover~#main .UrlBar {
+	transform: translateY(102%);
+	opacity: 1 !important;
+	border-radius: 0;
+	padding-top: 4px;
+	/* border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important; */
+}
+
+/* #header:not(.window-buttongroup):hover ~ #main .toolbar-addressbar {
+	transform: translateY(80%);
+	opacity: 1 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+} */
+
+/* #header:hover ~ #main .bookmark-bar {
+	transform: translateY(125%);
+} */
+
+/* * new bookmarkbutton thing | 8-10-20 */
+button.bookmarkbarItem:hover:not(:nth-of-type(2)):not(:nth-of-type(4)):not(:nth-of-type(8)):not(:nth-of-type(11)):not(:nth-of-type(11)):not(:nth-of-type(16)):not(:nth-of-type(18)):not(:nth-of-type(21)):not(:nth-of-type(24)):not(:nth-of-type(28)):not(:nth-of-type(31)):not(:nth-of-type(35)):not(:nth-of-type(37)):not(:nth-of-type(39)):not(:nth-of-type(41)) {
+	transform: scale(2) !important;
+	border-radius: 10px;
+	background-color: var(--colorAccentBgDarker);
+	border: 2px solid var(--colorBgAlphaHeavy);
+	/* border: 1px ridge rgb(58, 54, 54); */
+	box-shadow: 0 0 100vh 100vw rgba(0, 0, 0, 0.69);
+	transition: border 0.69s ease, transform 0.69s ease, box-shadow 0.69s;
+	/* filter: brightness(1) !important; */
+	z-index: 1;
+}
+
+.bookmark-bar button.bookmarkbarItem:hover {
+	/* filter: brightness(0); */
+	transition: 1s;
+}
+
+/*
+button.bookmarkbarItem:not(:hover) {
+	filter: brightness(1) !important;
+} */
+
+button:hover.bookmarkbarItem:hover,
+.separator:hover {
+	transform: scale(1);
+	border-radius: 0;
+	/* border: none; */
+	background-color: initial;
+	filter: brightness(1) !important;
+}
+
+/* .bookmark-bar button:not(.separator):hover {
+	transform: scale(1.25);
+	z-index: 1;
+} */
+
+/* .bookmark-bar :only-of-type button:hover { */
+
+.bookmark-bar>.bookmarkbarItem> :not(.separator) {
+	/* scale: 1 !important; */
+
+	transform: scale(1.35);
+	z-index: 6;
+	border-radius: 10px;
+	/* border: 1px ridge rgb(58, 54, 54); */
+}
+
+/*
+.bookmark-bar button {
+	transition: all 182.058ms ease 0ms;
+	/* * OLD animationz below | NEW animationz above! 3-1-20 */
+/* transition: all 0.2s; */
+/*
+	border-radius: 5px;
+}
+*/
+
+/* #main > div.bookmark-bar.default > div > button:nth-child(2) > span */
+/*
+.bookmark-bar button span {
+	transform: scale(1) !important;
+} */
+
+.OmniDropdown {
+	margin-top: 32px !important;
+	z-index: 1;
+	transition: visibility 1s;
+}
+
+/* .webpanel-header {
+	z-index: 0;
+} */

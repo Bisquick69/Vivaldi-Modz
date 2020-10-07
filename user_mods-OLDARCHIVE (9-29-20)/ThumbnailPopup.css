@@ -1,0 +1,67 @@
+/* ! CUSTOM TOOLTIPZ */
+
+#vivaldi-tooltip :is(.tooltip-item):not(.active) {
+	transform: translateY(62px) translatex(8px) scale(1.20);
+	background: var(--colorAccentBg);
+	color: var(--colorAccentFg);
+	font-weight: bold !important;
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	box-shadow: -0.5px -0.5px 0 2.5px var(--colorAccentBg), -0.5px -0.5px 0 1.5px var(--colorBgLight);
+	/* filter: drop-shadow(0 4px 4px #00000099) !important; */
+	filter: drop-shadow(0px 4px 4px #000000db);
+	transition: background-color 1.69s, color 1.69s, border-color 1.69s;
+}
+
+#vivaldi-tooltip :is(.tooltip-item) {
+	transform: translateY(10px) translateX(8px) scale(1.20);
+	background: var(--colorAccentBg);
+	color: var(--colorAccentFg);
+	font-weight: bold;
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	box-shadow: -0.5px -0.5px 0 2.5px var(--colorAccentBg), -0.5px -0.5px 0 1.5px var(--colorBgLight);
+	/* filter: drop-shadow(0 4px 4px #00000099) !important; */
+	filter: drop-shadow(0px 4px 4px #000000db);
+	transition: background-color 1.69s, color 1.69s, border-color 1.69s;
+}
+
+/* rounded popup thumbnail */
+.tabs-left~#vivaldi-tooltip .tooltip :is(.tooltip-item, .thumbnail-image) {
+	border-radius: var(--radiusHalf);
+	/* margin-top: 15px; */
+}
+
+/* red close button */
+#vivaldi-tooltip .tooltip .close:hover {
+	fill: beige;
+	background: crimson;
+	box-shadow: 0 0 0 1px beige;
+	/* ? ADding DIS to see what happenz */
+	/* transform: scale(1.25); */
+}
+
+/* focus highlighter */
+#vivaldi-tooltip .tooltip .tab-group .tooltip-item:hover {
+	transform: scale(1.069);
+	z-index: 3;
+	box-shadow: -0.5px -0.5px 0 1.5px var(--colorBgLight);
+	filter: drop-shadow(0 4px 4px #00000099);
+	transition: background-color 1.69s, color 1.69s, border-color 1.69s;
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+
+/* Active highlighter */
+#vivaldi-tooltip .tooltip .tab-group .tooltip-item.active {
+	background: var(--colorAccentBg);
+	box-shadow: -0.5px -0.5px 0 2.5px var(--colorAccentBg);
+	z-index: 2;
+}
+
+#vivaldi-tooltip .tooltip .tab-group .tooltip-item.active .thumbnail-image {
+	transform: translateX(0.3px);
+}

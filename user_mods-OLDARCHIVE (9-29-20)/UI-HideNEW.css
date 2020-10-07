@@ -1,0 +1,2039 @@
+/* *----------------------------------------------------------------- AESTHETIX OF HATE, PT1 -------------------------------------------------------------- */
+/* ? CUSTOM SVGz */
+
+.dial .folder-flap svg path {
+	d: path("M6.16,2.5H1.6A1.12,1.12,0,0,0,.5,3.63v8.75A1.12,1.12,0,0,0,1.6,13.5H14.4a1.12,1.12,0,0,0,1.1-1.12V5.76a1.19,1.19,0,0,0-1.1-1.23H7.76Z"
+		) !important;
+}
+
+.button-tabbar.toggle-trash>svg path {
+	d: path("M2 7c-1.105 0-2 0.895-2 2s0.895 2 2 2 2-0.895 2-2-0.895-2-2-2zm14 0c-1.105 0-2 0.895-2 2s0.895 2 2 2 2-0.895 2-2-0.895-2-2-2zm-7 0c-1.105 0-2 0.895-2 2s0.895 2 2 2 2-0.895 2-2-0.895-2-2-2z"
+		) !important;
+}
+
+.button-toolbar.back>svg path {
+	d: path("M293.004,78.525C249.64,3.436,153.62-22.295,78.531,21.061C3.436,64.411-22.296,160.443,21.068,235.542 c43.35,75.087,139.375,100.822,214.465,57.467C310.629,249.648,336.365,153.621,293.004,78.525z M219.836,265.802 c-60.075,34.685-136.894,14.114-171.576-45.969C13.57,159.762,34.155,82.936,94.232,48.253 c60.071-34.683,136.894-14.099,171.578,45.979C300.495,154.308,279.908,231.118,219.836,265.802z M211.986,141.328h-65.491 l17.599-17.603c6.124-6.129,6.124-16.076,0-22.197c-6.129-6.133-16.078-6.133-22.207,0l-44.402,44.4 c-6.129,6.131-6.129,16.078,0,22.213l44.402,44.402c6.129,6.128,16.078,6.128,22.207,0c6.124-6.131,6.124-16.077,0-22.201 l-17.606-17.601h65.499c8.669,0,15.697-7.041,15.697-15.701v-0.008C227.683,148.353,220.655,141.328,211.986,141.328z"
+		) !important;
+	transform: scale(0.05) !important;
+}
+
+.button-toolbar.forward>svg path {
+	d: path("M216.545,145.893l-44.374-44.368c-6.131-6.133-16.076-6.133-22.205,0h0.008c-6.129,6.121-6.129,16.068,0,22.197 l17.589,17.603h-65.485c-8.666,0-15.701,7.033-15.701,15.701v0.008c0,8.668,7.035,15.701,15.701,15.701h65.493l-17.597,17.601 c-6.129,6.132-6.129,16.069,0,22.201c6.122,6.136,16.066,6.136,22.197,0l44.41-44.402c6.128-6.127,6.128-16.078,0-22.209 C216.57,145.909,216.554,145.9,216.545,145.893z M235.533,21.057C160.438-22.291,64.414,3.433,21.063,78.521 c-43.356,75.096-17.633,171.119,57.464,214.483c75.087,43.353,171.119,17.625,214.476-57.47 C336.364,160.443,310.62,64.408,235.533,21.057z M265.801,219.83c-34.688,60.079-111.503,80.657-171.574,45.973 C34.158,231.118,13.565,154.304,48.25,94.229C82.932,34.151,159.756,13.567,219.828,48.25 C279.899,82.934,300.485,159.763,265.801,219.83z"
+		) !important;
+	transform: scale(0.05) !important;
+}
+
+/*
+.panelbtn.webviewbtn[title="vivaldi://extensions/"]>svg path {
+	d: path("M 448.801,271 H 497 c 8.284,0 15,-6.716 15,-15 V 111.4 c 0,-8.284 -6.716,-15 -15,-15 H 367.4 V 63.2 C 367.4,28.351 339.048,0 304.2,0 269.352,0 241,28.352 241,63.2 V 96.4 H 111.4 c -8.284,0 -15,6.716 -15,15 V 241 H 63.2 C 28.352,241 0,269.352 0,304.2 c 0,34.848 28.352,63.2 63.2,63.2 H 96.4 V 497 c 0,8.284 6.716,15 15,15 H 256 c 8.284,0 15,-6.716 15,-15 v -48.2 c 0,-18.307 14.894,-33.2 33.2,-33.2 18.306,0 33.2,14.894 33.2,33.2 V 497 c 0,8.284 6.716,15 15,15 H 497 c 8.284,0 15,-6.716 15,-15 V 352.4 c 0,-8.284 -6.716,-15 -15,-15 h -48.199 c -18.308,0 -33.201,-14.894 -33.201,-33.2 0,-18.306 14.893,-33.2 33.201,-33.2 z m 0,96.4 H 482 V 482 H 367.4 v -33.2 c 0,-34.849 -28.352,-63.2 -63.2,-63.2 -34.848,0 -63.2,28.351 -63.2,63.2 V 482 H 126.4 V 352.4 c 0,-8.284 -6.716,-15 -15,-15 H 63.2 C 44.893,337.4 30,322.506 30,304.2 30,285.894 44.894,271 63.2,271 h 48.2 c 8.284,0 15,-6.716 15,-15 V 126.4 H 256 c 8.284,0 15,-6.716 15,-15 V 63.2 C 271,44.893 285.894,30 304.2,30 c 18.306,0 33.2,14.894 33.2,33.2 v 48.2 c 0,8.284 6.716,15 15,15 H 482 V 241 h -33.199 c -34.85,0 -63.201,28.352 -63.201,63.2 0,34.848 28.351,63.2 63.201,63.2 z"
+		) !important;
+	transform: scale(0.05) !important;
+}
+
+.panelbtn.webviewbtn[title="vivaldi://extensions/"]>img.src {
+	background: url(https://image.flaticon.com/icons/svg/786/786285.svg) !important;
+	transform: scale(0.05) !important;
+}
+*/
+/* ! UI TEXT ADJUSTMENTZ */
+* {
+	text-shadow: transparent 0 0 0,
+		rgba(0, 0, 0, 0.8) 0 0 0,
+		0px 0px 2px black !important;
+}
+
+.dial-folder-icon {
+	background: transparent;
+}
+
+.dial .thumbnail-image svg .folder-tab-color {
+	fill: var(--colorBgIntense);
+}
+
+.dial .folder-flap svg {
+	width: 16px !important;
+	height: 16px !important;
+	position: relative !important;
+	transform: scale(12);
+	top: 42px !important;
+	left: 16px;
+}
+
+.speeddial .draggable.dial {
+	-webkit-filter: grayscale(100%) brightness(80%);
+}
+
+.speeddial .draggable.dial:hover {
+	-webkit-filter: grayscale(0%) brightness(100%);
+}
+
+/*  * -------------------------------------------------------------------------------- TABzzzzzzzzzz ------------------------------------------------------------------ */
+
+/* ! Tab Nonsense */
+/* ? Look into dis one */
+/* .tab.tab.tab:not(.active) .tab-header:hover .toolbar-addressbar {
+	margin-top: calc(var(--toolbarHeight) * -1) !important;
+	/* top: 0 !important; */
+/*
+	transition: all ease-out 0.35s !important;
+	transition-delay: 0.69s !important;
+	z-index: 9;
+} */
+
+.synced-tabs-button:hover {
+	fill: var(--colorAccentBG) !important;
+	filter: drop-shadow(1px 1px 1px var(--colorAccentBG)) !important;
+}
+
+/* ? NEW! (1-29-19) */
+.tab-header {
+	font-weight: 600;
+	letter-spacing: 0.69px;
+	padding-bottom: calc(var(--padding) + 5px);
+}
+
+#tabs-container.tab-group-open {
+	height: 35px !important;
+}
+
+/* ?? 2-6-19 */
+/*
+.tab.active.tab-group {
+	font-weight: 600;
+	letter-spacing: 0.69px;
+	padding-bottom: calc(var(--padding) + 27px);
+}
+
+.tab:not(.active).tab-group {
+	padding-bottom: calc(var(--padding) + 22px);
+}
+
+.favicon {
+	/*background-position: 75% -25% !important;*/
+/*
+	background-size: 18px !important;
+	border-radius: 4px !important;
+	transform: translateY(-2.5px) !important;
+}
+*/
+/* ! MOAR Tab Nonsense */
+
+.tab-strip:hover .tab-position .tab.tab.tab:not(.active) {
+	/* background-color: var(--colorAccentBg); */
+	background-color: var(--colorAccentBgAlpha);
+	filter: contrast(0.69);
+	color: var(--colorAccentFg);
+	z-index: 12;
+}
+
+/* .tab.tab.tab.active:hover .toolbar-addressbar {
+	border-radius: 10px;
+	top: calc(var(--toolbarHeight) * 1);
+	transition: top ease-out 0.35s !important;
+	transition-delay: 0.69s !important;
+	/* z-index: 20; */
+/*
+} */
+
+.tab.tab.tab:not(.active) .tab-header:hover .favicon {
+	animation-name: spin2win;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* .tab.tab.tab:not(.active) .tab-header:hover .audioicon {
+	transform-origin: left top !important;
+	transform: scale(1) translateZ(0) !important;
+} */
+
+.tab {
+	background-color: var(--colorAccentBg);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	transition: background-color 1.69s, color 1.69s, border-color 1.69s;
+}
+
+.newtab {
+	/* top: 10px !important; */
+	filter: drop-shadow(1px 1px 5px var(--colorBgAlpha));
+	margin: 0 !important;
+	padding: 6px;
+	transform: scale(1.25);
+	z-index: 69 !important;
+}
+
+/* ? ------ Commenting Out for CenteredTabz&AddyBar.css Testiez -----
+#browser.tabs-top .newtab {
+	top: -10px !important;
+}
+*/
+/* ! 9-23-19 - LEFT TAB THING */
+#tabs-container.left .newtab {
+	margin-left: -4px !important;
+}
+
+#tabs-container.right .newtab {
+	margin-right: -4px !important;
+}
+
+#tabs-container.left .sync-and-trash-container {
+	margin-left: -14px;
+}
+
+#tabs-container.right .sync-and-trash-container {
+	margin-right: -14px;
+}
+
+#tabs-container.left .resize,
+#tabs-container.right .resize {
+	margin-top: 31px;
+}
+
+#browser.tabs-left .vivaldi,
+#browser.tabs-right .vivaldi {
+	left: -3px !important;
+}
+
+/* ! LEFT TAB THING END */
+.newtab:hover svg {
+	fill: var(--colorAccentBg) !important;
+	opacity: 1 !important;
+	filter: contrast(0.75);
+	animation-name: spinny;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	color: var(--colorAccentBGDarker) !important;
+	border-color: var(--colorAccentBGDarker) !important;
+	outline-color: var(--colorAccentBGDarker) !important;
+	border-radius: 25px !important;
+	transition: all 1.69s linear;
+}
+
+.button-toolbar.newtab:hover svg {
+	scale: 1.25;
+	filter: brightness(1.5);
+}
+
+.tab.tab.tab:not(.active) .tab-header:hover {
+	background-color: var(--colorAccentBg);
+	opacity: 1;
+	/* transition: background-color 1.69s, color 1.69s, border-color 1.69s; */
+	transition: all 1.69s linear;
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	z-index: 11 !important;
+	/* ? 12-10-19 | In conjunction with line 387 | ACTTAB-HIGHLIGHT */
+	border-bottom-style: inherit !important;
+	border-right-style: inherit !important;
+	border-left-style: inherit !important;
+	border-color: inherit !important;
+}
+
+.tab-header {
+	text-shadow: transparent 0 0 0, rgba(15, 15, 15, 0.95) 0 0 0 !important;
+}
+
+#tabs-container {
+	background-color: transparent !important;
+	z-index: 5 !important;
+	/* transform: translateY(0%);  */
+	/* ? ADDING for testies of tabstrip moving up when hovering over other ish */
+}
+
+/* * 6-27-20 | Trying to fix only tab displaying outline - maybe put on the glow effect with a not selector * */
+.tab-strip .tab-position:only-child {
+	height: 0;
+	width: 0;
+}
+
+/*! ------------------ Tab Stack Ish -----------------------*/
+
+.tab-indicator {
+	/* bottom: -6px !important; */
+	/* box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 1); */
+	transform: translateY(26px);
+	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.69)) !important;
+	/* filter: drop-shadow(20px 2px 2px rgba(0, 0, 0, 0.8)); */
+}
+
+.tab-group:hover .tab-group-indicator {
+	flex-direction: column;
+	position: relative;
+}
+
+.tab-group .tab-group-indicator {
+	bottom: -6px;
+}
+
+.tab-group:hover .tab-group-indicator:before {
+	content: "";
+	height: 1px;
+	width: calc(100% - 4px);
+	position: absolute;
+	left: 0;
+	/* background-color: var(--colorBg);
+	border: 1px solid transparent; */
+}
+
+.tab-group:hover .tab-indicator {
+	height: 30px !important;
+	margin-top: 2px;
+}
+
+.tab-group:hover .tab-indicator:before {
+	content: "";
+	background: var(--colorBgInverser);
+	display: flex;
+	height: 26px;
+	width: 172px;
+	border-radius: var(--radiusHalf);
+}
+
+.tab-group:hover .tab-indicator:after {
+	content: attr(title);
+	display: block;
+	width: 168px;
+	position: relative;
+	top: -20px;
+	left: 4px;
+	color: var(--colorFg);
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-linear-gradient(180deg,
+			transparent 0,
+			#fff 16px);
+	-webkit-mask-position: top right;
+}
+
+.tab-group:hover .tab-indicator {
+	background: transparent !important;
+}
+
+.tab-group:hover .tab-indicator.active {
+	height: 26px;
+	width: 172px;
+	border-bottom: 1px solid var(--colorAccentBg) !important;
+	border-radius: var(--radiusHalf);
+	background: transparent !important;
+}
+
+.tab-group:hover .tab-indicator:hover:before {
+	background: var(--colorHighlightBg);
+}
+
+.tab-group:hover .tab-indicator:hover:after {
+	color: var(--colorHighlightFg);
+}
+
+.tabs-right .tab-group:hover .tab-group-indicator,
+.tabs-left .tab-group:hover .tab-group-indicator {
+	top: 30px !important;
+	bottom: unset !important;
+}
+
+.tabs-right .tab-group:hover .tab-group-indicator:before,
+.tabs-left .tab-group:hover .tab-group-indicator:before {
+	top: -27px;
+	bottom: unset !important;
+}
+
+.tabs-top .tab-group:hover .tab-group-indicator {
+	top: 26px !important;
+	bottom: unset !important;
+	left: -6px;
+}
+
+.tabs-top .tab-group:hover .tab-group-indicator:before {
+	top: -30px;
+	bottom: unset !important;
+	left: 10px;
+	width: calc(100% - 10px);
+}
+
+.tabs-bottom .tab-group:hover .tab-group-indicator {
+	top: unset !important;
+	bottom: 26px !important;
+}
+
+.tabs-bottom .tab-group:hover .tab-group-indicator:before {
+	top: unset !important;
+	bottom: -30px;
+}
+
+.tabs-right .tab-position:hover,
+.tabs-left .tab-position:hover {
+	z-index: 3 !important;
+}
+
+/* *----------------------------------------------------------------- AESTHETIX OF HATE, PT2 -------------------------------------------------------------- */
+/* ! Tab Aesthetic Adjustmentzzzzzz */
+
+/* * WEIRD DOT THINGY * */
+.tabs-top .tab.active:not(.marked):not(.tab-mini):before {
+	display: none;
+}
+
+.tabs-top .tab.active:not(.marked):not(.tab-mini):after {
+	display: none;
+}
+
+.tab-header .favicon {
+	box-shadow: none !important;
+	background-color: transparent !important;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+.tab-position .tab.active .tab-header .favicon,
+.tab-position .tab .tab-header .favicon {
+	background-color: rgba(255, 255, 255, 0.65);
+}
+
+.tab-position .tab.active .tab-header .favicon {
+	background-color: transparent !important;
+}
+
+/* ! NEW - attempt to fade background tabs moar */
+/*
+.tab.tab.tab:not(.active) .tab-header:not(:hover) {
+	filter: contrast(0.69) saturate(0) grayscale(45%) !important;
+}
+*/
+.tab-strip:hover .tab.tab.tab:not(.active):not(:hover) {
+	filter: contrast(0.69) saturate(1) grayscale(45%) blur(0.69px) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) !important;
+	opacity: 0.69;
+	overflow: hidden;
+	transition: all 1.69s linear;
+}
+
+/* ! 12-10-19 | Attempt to highlight active tab in case accent does not distinguish on tabstrip hover | ACTTAB-HIGHLIGHT*/
+/* ?USEFUL SELECT0rz - :not(:nth-last-of-type(2)) */
+/* * MOAR: :not(.tab:last-of-type) .tab.active:not(:only-of-type) | :not(.newtab):hover | :not(span):only-of-type */
+/* ?TEST - try double nought?! :not(:not(.active)) | .newtab:not(:hover) */
+.tab-strip:hover .tab.active {
+	/* border-color: var(--colorborderhighlight) !important;
+	border-bottom-style: double;
+	border-bottom-width: 2.5px;
+	border-right-style: double;
+	border-left-style: double; */
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 2px solid #51cbee;
+	border-width: 0px 2px 2px 2px !important;
+	transition: all 1.69s linear;
+	/* width: initial; */
+	overflow: hidden;
+	animation-name: glowy;
+	animation-duration: 00.69s;
+	animation-iteration-count: infinite;
+	/* align-content: center; */
+}
+
+@keyframes glowy {
+	0% {
+		box-shadow: 0px 0px 8px rgba(81, 203, 238, 1);
+		border: 2px solid #51cbee;
+	}
+
+	50% {
+		box-shadow: 1px 1px 14px rgba(81, 203, 238, 0.2);
+		/* 		box-shadow: 1px 1px 14px var(--colorAccentBorderDark); */
+		border: 2px solid var(--colorAccentBgFadedMost);
+	}
+
+	100% {
+		box-shadow: 0px 0px 8px rgba(81, 203, 238, 1);
+		border: 2px solid #51cbee;
+	}
+}
+
+/* #header:hover .tabstrip:hover .newtab:hover .tab.active {
+	box-shadow: none;
+	border: none;
+	/* top: -5px; */
+/*
+} */
+
+.tab-strip:hover .tab.active {
+	/* width: max-content; */
+	/* overflow: visible; */
+	/* box-shadow: none;
+	border: none;
+	border-width: none; */
+	transition: all 1.69s linear;
+}
+
+/* .tab-strip:hover .tab.active:hover .tab.tab.tab:not(.active) {
+	visibility: collapse;
+} */
+
+/* .tab:not(.active) .tab-position:not(:hover) {
+	opacity: 0.69;
+} */
+
+.dials .dial .thumbnail-image {
+	background-color: transparent;
+	background-image: none;
+}
+
+.dials .dial .thumbnail-image {
+	box-shadow: none !important;
+}
+
+div#browser.maximized>div#header>div#tabs-container>div.resize>div.tab-strip>span>div.tab-position>div.tab.active.tab-group>div.tab-group-indicator {
+	filter: invert(100%);
+}
+
+div#browser.maximized>div#header>div#tabs-container>div.resize>div.tab-strip>span>div.tab-position>div.tab.active.tab-group>div.tab-group-indicator>div.tab-indicator.active {
+	filter: invert(75%);
+	height: unset;
+	left: -2px;
+	right: -2px;
+	background-color: var(--colorBgAlphaHeavier) !important;
+}
+
+#browser.win.win10 .window-buttongroup button {
+	width: 30px !important;
+	transition: 1s;
+}
+
+#browser.tabs-top #tabs-container .sync-and-trash-container {
+	margin-right: -44px !important;
+}
+
+/*! Adjust Buttons to look not shit */
+/* ! Footer = HEADER?! */
+#droptool:not(:hover) {
+	opacity: 0.85;
+	background-color: var(--colorAccentBg);
+}
+
+#footer.footer {
+	background-color: var(--coloraccentbg) !important;
+}
+
+/* * Footer Buttonzzz  * */
+.button-toolbar-small {
+	fill: var(--colorAccentBGDarker);
+}
+
+.button-toolbar-small:hover {
+	fill: var(--colorAccentBG);
+}
+
+.theme-dark .tab-position .tab.active .tab-header .favicon {
+	filter: none;
+}
+
+.paneltogglefooter:hover {
+	border-bottom-left-radius: 10px;
+}
+
+.toggle-extensions-group:hover {
+	border-bottom-right-radius: 10px !important;
+}
+
+.toolbar.UrlBar .extensions-wrapper .button-toolbar.browserAction-button {
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+/* ! VIVALDI BURGER YUM */
+.color-behind-tabs-off .vivaldi span.burger-icon {
+	padding-right: 1px;
+	margin-left: 12px;
+	/* filter: drop-shadow(1px 1px 1px var(--colorAccentBg)) !important; */
+}
+
+.vivaldi:hover .burger-icon svg {
+	fill: var(--colorAccentBg) !important;
+	opacity: 1 !important;
+	filter: drop-shadow(1px 1px 1px var(--colorAccentBgDarker)) !important;
+	transition-delay: 0.1s linear 0.69s !important;
+}
+
+#header:hover~#main #panels-container {
+	margin-top: 32px !important;
+}
+
+/* ? Enable dis to turn off vingette effect (that was totally accidental tbh) */
+/*
+#header:hover ~ #main {
+	-webkit-mask-image: none !important;
+}
+*/
+.button-toolbar.paneltogglefooter {
+	background-color: var(--colorAccentBGAlpha);
+}
+
+.button-toolbar.paneltogglefooter:hover {
+	background-color: var(--colorAccentBG);
+}
+
+/* ? 12-10-19 - Changing for slight aesthetic annoyance of webpanel header button rightmost hover changing border radius (border-bottom-right) */
+/* .button-toolbar.home:hover,
+.button-toolbar.toggle-extensions-group:hover {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+} */
+
+.address-top .UrlBar:after,
+.address-top .toolbar-mailbar:after {
+	height: 0;
+}
+
+#main>div.toolbar.UrlBar.toolbar-mainbar.toolbar-large>div.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large {
+	border-bottom-left-radius: 15px;
+}
+
+.address-top .toolbar-mainbar:after {
+	content: none;
+}
+
+.extensionaction .hiddenpopup {
+	background-color: var(--colorAccentBg);
+}
+
+.zoom-control {
+	text-shadow: 1px 1px 1px rgba(10, 1, 1, 0.945);
+}
+
+.color-behind-tabs-off .toolbar-mainbar>.button-toolbar>button.button-pressed {
+	/* background-image: linear-gradient(var(--colorAccentBgDarker), var(--colorAccentBgDark)); */
+	border-bottom-right-radius: 10px;
+}
+
+.extension-popup.top {
+	position: absolute !important;
+	margin-top: 25px;
+}
+
+.extensionIconPopupMenu {
+	/* margin-top: 25px; */
+	top: 67px;
+	max-width: unset !important;
+	background: var(--colorAccentBgFadedMore);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.button-popup .button-popup-wrapper {
+	background-color: var(--colorAccentBGDarker);
+	overflow: visible;
+}
+
+/* ? To round borders inside of wrapper declared above */
+.button-popup {
+	overflow: hidden;
+}
+
+.button-toolbar.ExtensionDropdownIcon button:hover {
+	transform: scale(1.25);
+	background-color: var(--colorAccentBgDarker);
+	/* border-radius: 10px; */
+	border: 1px ridge rgb(58, 54, 54);
+	z-index: 1;
+}
+
+.button-toolbar.ExtensionDropdownIcon button {
+	transition: transform 0.2s;
+	z-index: initial;
+	border: initial;
+}
+
+.button-popup-arrow--dark--below {
+	top: 69px;
+}
+
+.button-popup-arrow--light--below {
+	top: 69px;
+}
+
+.button-popup {
+	top: 69px !important;
+}
+
+.addressfield-popup.top {
+	margin-top: 25px;
+}
+
+.win #tabs-container.top {
+	padding-left: 50px;
+}
+
+/*  * Closed Tabs AKA TRASHHHHHHHHH */
+.toggle-trash {
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)) !important;
+}
+
+.toggle-trash:hover {
+	fill: var(--colorAccentBg) !important;
+	opacity: 1 !important;
+	filter: drop-shadow(1px 1px 1px var(--colorAccentBgDarker)) !important;
+	transition-delay: 0.1s linear 0.69s !important;
+}
+
+.newtab svg {
+	/* border-radius: 25px !important; */
+	border-color: var(--colorAccentBG) !important;
+	border-width: 1px;
+	opacity: 0.69;
+	padding: 0.8px;
+	border-style: solid;
+	transition: all 1.69s linear;
+}
+
+/* #tabs-container:hover */
+/* .resize:hover .tab-strip:hover .toolbar-addressbar {
+	margin-top: calc(var(--toolbarHeight) * -1);
+	top: 0;
+	padding-top: 30px !important; /* Padding AddyBurr when hovering over tabstrip...I think */
+/*	z-index: 9;
+	transition: all ease-in-out 0.69 !important;
+} */
+
+.tab:hover .tab-position {
+	top: -1px;
+}
+
+.tab:hover {
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)) !important;
+}
+
+/* ? ADDING (6-15-19) more distinguished active tab */
+.tab.active {
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5)) !important;
+	overflow: hidden;
+	transition: all 1.69s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	/* ? Trying to get rid of 1 tab highlight thing */
+	/* border: none; */
+	/* box-shadow: none; */
+}
+
+/* * Trying to get rid of 1 tab highlight thing */
+#tabs-container:not(.tabstrip):hover .newtab:hover .tab.active {
+	box-shadow: none;
+	border: none;
+	border-width: none;
+}
+
+/* WAS .tab-position .tab .progress-indicator.progress-done {  | REVERTED BACK CUZ JUST .progress-done didn't work for some reason */
+.tab-position .tab .progress-indicator.progress-done {
+	opacity: 0.8 !important;
+	background-color: var(--colorAccentBgDark);
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)) !important;
+}
+
+/*! ------------------ Select DropDown------------------*/
+select {
+	background-size: 18px 18px;
+	background-blend-mode: luminosity;
+}
+
+/* ? Focused Highlight Color */
+button:focus:not([tabindex="-1"]),
+input:focus:not([tabindex="-1"]),
+select:focus:not([tabindex="-1"]),
+textarea:focus:not([tabindex="-1"]),
+input[type="text"]:focus:not([tabindex="-1"]),
+input[type="search"]:focus:not([tabindex="-1"]),
+input[type="password"]:focus:not([tabindex="-1"]),
+input[type="email"]:focus:not([tabindex="-1"]),
+input[type="url"]:focus:not([tabindex="-1"]),
+input[type="number"]:focus:not([tabindex="-1"]),
+input[type="radio"]:focus:not([tabindex="-1"]),
+input[type="date"]:focus:not([tabindex="-1"]),
+input[type="time"]:focus:not([tabindex="-1"]),
+input[type="checkbox"]:focus:not([tabindex="-1"]),
+input[type="button"]:focus:not([tabindex="-1"]),
+input[type="submit"]:focus:not([tabindex="-1"]) {
+	/* border-color: var(--colorAccentBgDarker); */
+	outline-color: var(--colorAccentBgAlpha);
+}
+
+/* * ----------------------------------------------------- TOOLBARZ  ----------------------------------------------------- */
+/*!  MAIN transitionz - 3-1-20 */
+#main.left {
+	transition-duration: 561.2351154110663ms;
+	transition-delay: 690ms;
+}
+
+/* ! Header...hardly know er */
+/* #browser:not(.popup)  */
+#header {
+	position: fixed !important;
+	width: 100%;
+	max-height: 27px;
+	transform: translateY(-90%);
+	box-shadow: none !important;
+	transition: all 503.783ms ease 266.012ms;
+	/* * OLD animationz below | NEW animationz above! 3-1-20 */
+	/* transition: all 0.69s !important; */
+	/* transition-delay: 1.69s; */
+	z-index: 10;
+}
+
+#header:not(.toolbar):hover {
+	transform: translateY(0);
+	/*! or 34 px*/
+	transition-delay: 0.69s;
+	z-index: 6;
+}
+
+/* ! Window behavior */
+
+#browser:not(.maximized):not(.popup) #header:hover {
+	transform: translateY(-34%);
+	/* * was 21%  */
+	z-index: 4;
+}
+
+#browser:not(.maximized):not(.popup) #header {
+	transform: translateY(-105%);
+}
+
+/* ? Trying to make windowbuttonz NOT do header hover ish */
+
+div#browser.maximized>div#header~.window-buttongroup:hover {
+	transform: translateY(-90%);
+	/* transition: transform 0.69s !important; */
+	transition: 1s;
+}
+
+/* ? Adding overlay effect I guess?! */
+
+#header:hover~#main:not(#tabs-container) {
+	filter: brightness(0.35) blur(1px);
+	transition: all 0.69s linear;
+	transition-delay: 0.69s;
+}
+
+/* #header:not(:hover) {
+	transition: all 0.69s linear;
+} */
+
+/* ! ADDRESSBURRRR */
+/* ? Check dis shit - 2-21-20 */
+
+/* .UrlBar.toolbar .toolbar {
+	order: 1;
+	/* margin-left: 5px; */
+}
+
+*/
+
+/* #addbookmarks {
+	order: 2;
+} */
+.addressfield {
+	order: 3;
+}
+
+.searchfield {
+	order: 4;
+}
+
+.toolbar.toolbar-mainbar .toolbar-extensions {
+	order: 5;
+	margin-right: 5px;
+}
+
+/* *Tab distinctions when addressbar hovered  - 2-21-20 */
+.tab-strip:not(:hover) .tab:not(.active),
+.UrlBar:hover {
+	box-shadow: 0px 0px 1px 2px #000000b8;
+}
+
+.tab:not(.active),
+.UrlBar:not(:hover) {
+	box-shadow: none;
+}
+
+/* ? Smooth gradient from address bar to progress info - also see ProgressBarTOStatusBar.css */
+/* * ? Potentially why ish isn't showing?? */
+/* * YUP ! - WAS .UrlBar-UrlFieldWrapper */
+.UrlBar-UrlField {
+	-webkit-mask-image: -webkit-linear-gradient(180deg, #0000 0, #000 20px);
+}
+
+/* ? Reload button Spinny ! */
+.UrlBar .button-toolbar button[title~="Reload"]:hover {
+	border-radius: 20px !important;
+	animation-name: spin2win;
+	animation-duration: 250ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+#panels>div.panel-group>div>div>div.panel.webpanel.visible>header>div>div:nth-child(3)>button:hover {
+	/* border-radius: 20px !important; */
+	animation-name: spin2win;
+	animation-duration: 250ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+.addressfield form input.url:focus .UrlBar {
+	visibility: visible;
+	opacity: 1;
+	padding-top: 0px !important;
+	box-shadow: 2px 2px 18px 3px var(--colorBgAlpha);
+	transition: opacity 0.069s linear 1s, padding 0.2s ease-in 0.69s !important;
+	/* * ADDED PADDING TRANSITION TO SMOOTH ANIMATION MAYBZ IDK */
+}
+
+.addressfield form input.url:active .UrlBar {
+	visibility: visible;
+	opacity: 1;
+	padding-top: 0px !important;
+	box-shadow: 2px 2px 18px 3px var(--colorBgAlpha);
+	transition: opacity 0.069s linear 1s, padding 0.2s ease-in 0.69s !important;
+	/* * ADDED PADDING TRANSITION TO SMOOTH ANIMATION MAYBZ IDK */
+}
+
+.addressfield form input.url:focus-within .UrlBar {
+	visibility: visible;
+	opacity: 1;
+	padding-top: 0px !important;
+	box-shadow: 2px 2px 18px 3px var(--colorBgAlpha);
+	transition: opacity 0.069s linear 1s, padding 0.2s ease-in 0.69s !important;
+	/* * ADDED PADDING TRANSITION TO SMOOTH ANIMATION MAYBZ IDK */
+}
+
+/* ! ADDYBUR AESTHETIX */
+/*! ------------------ Button Orderz & Such -------------*/
+.UrlBar {
+	position: absolute;
+	/* left: 25%;
+	width: 100%;
+	max-width: 50%; */
+	padding-bottom: 4px !important;
+	/* padding-top: 8px; */
+	/* * Adding padding for tabz */
+	padding-top: 12px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/* margin-top: -30px; */
+	/* top: 24px; */
+	margin-top: -6px;
+	transition: 1.69s !important;
+	/* z-index: 1 !important; */
+	/* transform: translateY(-90%); */
+	/* transition: all ease-in 0.15s !important; */
+	/* transition-delay: 1.69ms !important; */
+	opacity: 1 !important;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+	box-shadow: 1px 4px 25px 2px rgba(0, 0, 0, 1);
+	pointer-events: auto;
+}
+
+#browser.win.maximized .UrlBar {
+	left: 25%;
+	width: 100%;
+	max-width: 50%;
+}
+
+.win.normal .UrlBar:hover {
+	padding-top: 17px;
+}
+
+/* ~ :not(.bookmark-bar:hover) */
+.UrlBar:not(:focus-within):not(:hover)>button:not(.button-pressed) {
+	/* top: 0px; */
+	/* * WAS commented out (top) | WAS !important along with below (opacity) */
+	transform: translateY(-78%);
+	opacity: 0.01 !important;
+	border-radius: 10px;
+	/* ? 8-10-20 | ANIMATION TESTIEZ | maybe put important if no worky? */
+	transition: transform 1.69s ease-out 1.69s, opacity 1s ease-in-out 1s;
+	/* transition: all ease-out 0.15s 0.69s !important; */
+	/* * Old animationz above - New below - 3-1-20 */
+	/* transition: all 1029.42ms ease-out 249.561ms !important; */
+	/* transition: all 899.946ms ease-out 766.946ms !important; */
+	/* transition: all 512.035ms ease-out 766.946ms !important; */
+	/* transition: all 200.439ms ease-out 249.561ms !important; */
+	/* transition-delay: 1.69ms !important; */
+	/* z-index: 1 !important; */
+}
+
+.UrlBar:not(:focus-within):not(:hover) {
+	opacity: 0 !important;
+	transform: translateY(-69%);
+	transition: 1s;
+}
+
+/* * sliiiight delay to re-access addybar if hover not precise */
+/* ? OLD select0r below */
+/* .tabstrip:hover,
+.toolbar-addressbar:not(:focus-within):not(:hover):not(:active) {
+	*/
+/* ? NEW select0r for extension popup to recede when not focused */
+.tabstrip:hover,
+.UrlBar:not(:focus-within):not(:hover)>button:not(.button-pressed) {
+	padding-top: 42px;
+}
+
+.profile-popup {
+	border-bottom-left-radius: 10px !important;
+	padding-left: 2px !important;
+	order: -1;
+}
+
+/* #main ~ .toolbar-addressbar:hover {
+	top: var(--toolbarHeight) !important;
+	transition: all 0.69s !important;
+	z-index: 3 !important;
+} */
+
+/* ! BOOKMURK BURR */
+
+/*  ! ANIMAYshunz */
+/* ? IDEA - make animation for closed tabs dots ("trash") scale up in sequence when hovered over */
+
+/* * 6-25-20 | added important to errything */
+@keyframes pulse {
+	0% {
+		background-color: var(--colorAccentBgDarker);
+	}
+
+	40% {
+		background-color: var(--colorAccentBgFadedMost);
+		/* color: var(--colorFgAlpha); */
+		/* fill: var(--colorAccentBgDark); */
+		/* color: var(--colorAccentBgDark); */
+		fill: var(--colorAccentFg);
+		color: var(--colorAccentFg);
+	}
+
+	60% {
+		background-color: var(--colorAccentBgFadedMost);
+		/* color: var(--colorFgAlpha); */
+		/* fill: var(--colorAccentBgDark); */
+		/* color: var(--colorAccentBgDark); */
+		fill: var(--colorAccentFg);
+		color: var(--colorAccentFg);
+	}
+
+	100% {
+		background-color: var(--colorAccentBgDarker);
+	}
+}
+
+@keyframes pulsecolor {
+	0% {
+		color: var(--colorAccentBgDarker);
+	}
+
+	40% {
+		/* color: var(--colorAccentBgFadedMost); */
+		filter: invert(100%) color;
+		/* color: var(--colorFgAlpha); */
+	}
+
+	60% {
+		/* color: var(--colorAccentBgFadedMost); */
+		filter: invert(100%) color;
+		/* color: var(--colorFgAlpha); */
+	}
+
+	100% {
+		color: var(--colorAccentBgDarker);
+	}
+}
+
+@keyframes spinny {
+	0% {
+		fill: var(--colorAccentBgDark);
+	}
+
+	50% {
+		fill: var(--colorAccentBgDarker);
+	}
+
+	100% {
+		fill: var(--colorAccentBgDark);
+	}
+
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin2win {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spindlebindle {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ! Window Controlzzz */
+/* * Delaying header transform when window controls hovered */
+/* #header:not(#tabs-container):hover~.window-buttongroup:hover {
+	transition-delay: 1.69s;
+} */
+
+#browser.win.win10 .window-buttongroup:not(:hover) {
+	z-index: 1;
+	/* -webkit-mask-image: linear-gradient(0deg, #000, #000 24px); */
+	/* filter: linear-gradient(0deg, #000, #000 24px); */
+	box-shadow: 1px 0px 15px 8px var(--colorBgAlpha);
+	transition: 1s;
+	/* WAS IMPORTANT above */
+}
+
+#browser.win.win10 .window-buttongroup:hover {
+	/* -webkit-mask-image: none; */
+	transition: 1s;
+}
+
+#browser.win.win10 .window-buttongroup {
+	/* box-shadow: none; */
+	box-shadow: 1px 0px 10px 5px var(--colorBgAlpha);
+	/* -webkit-mask-image: none; */
+	-webkit-mask-image: linear-gradient(0deg, #000, #000 24px);
+	transition: 1s;
+}
+
+#browser.win.win10 #header #titlebar .window-buttongroup button.window-close {
+	background-color: rgba(127, 26, 26, 0.416);
+	fill: rgba(255, 255, 255, 0.56);
+}
+
+/* * Fix for glyph thing  */
+/*
+.window-minimize:hover {
+	fill: #fff;
+}
+
+.window-maximize:hover {
+	fill: #fff;
+}
+*/
+
+/* ! Tab close animation thingy */
+.close:not(.vivaldi-tree):not(.tree-row) {
+	/* z-index: 1; < 1 covers all */
+	z-index: 2;
+	/* position: relative; */
+	font-size: inherit;
+	font-family: inherit;
+	color: white;
+	/* padding: 0.5em 1em; */
+	outline: none;
+	border: none;
+	background-color: hsla(0, 33%, 22%, 0.623);
+	overflow: hidden;
+	transition: all 0.69s ease;
+	/* ? WAS color 0.4s ease-in-out */
+}
+
+.close::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	/* top: 50%; */
+	/* left: 50%; */
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: #ff3c3c;
+	/* transform-origin: center; */
+	transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+	transition: all 0.69s ease;
+}
+
+.close:hover {
+	cursor: crosshair;
+	/* color: #161616b0; */
+	/* color: var(--colorAccentBgAlphaHeavy); */
+	/* animation-name: pulsecolor;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite; */
+	/* border: 3px solid #7c2222; */
+	/* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)); */
+	/* box-shadow: 1px 4px 25px 2px rgba(0, 0, 0, 1); */
+	/* box-shadow: inset 10px 10px 4px -8px rgba(0, 0, 0, 0.75); */
+	border: 0.69px solid rgba(0, 0, 0, 0.287);
+	border-radius: 8px;
+	transition: all 0.69s ease;
+	/* ? 8-10-20 | TESTIEZ */
+	animation: closebackup 1.69s 2s 1;
+}
+
+.close:hover svg {
+	animation: spindlebindle 1s linear infinite;
+}
+
+.close:hover::before {
+	transform: translate3d(-50%, -50%, 0) scale3d(30, 30, 15);
+	transition: all 0.69s ease;
+}
+
+/* ? 8-10-20 | TESTIEZ */
+@keyframes closebackup {
+	from {
+		transform: translate3d(-50%, -50%, 0) scale3d(30, 30, 15);
+		z-index: 2;
+	}
+
+	to {
+		z-index: -1;
+		transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+	}
+}
+
+button.window-maximize:hover,
+button.window-minimize:hover {
+	opacity: 1;
+}
+
+/* ? ADDING (6-15-19) Effectz to close to make it stand out */
+/*
+.close:hover {
+	background-color: rgba(127, 26, 26, 0.416);
+	fill: rgba(255, 255, 255, 0.56);
+	/* animation: none; */
+/* animation-name: spinny;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; */
+/*
+	box-shadow: 1px 4px 25px 2px rgba(0, 0, 0, 1);
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)) !important;
+	border-radius: 10px;
+}
+
+.close:hover svg {
+	background-color: #2c2f222e !important;
+	fill: rgba(255, 255, 255, 0.56);
+	animation-name: spinny;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	border-radius: 10px;
+	filter: invert(1);
+}
+
+.close:hover ~ .title {
+	text-decoration: line-through;
+	text-decoration-line: line-through;
+	text-decoration-color: #55131f;
+	text-decoration-style: solid;
+}
+*/
+/* !Window Distinctionz */
+/* #browser:not(.maximized):not(.popup)~:not(#header):not(:hover),
+.newtab {
+	transform: translateY(20%) !important;
+	transition: 0.69s;
+} */
+
+:not(#browser.win.maximized) .UrlBar {
+	max-width: 100% !important;
+	width: 100%;
+	left: 0 !important;
+	border-radius: 0;
+}
+
+:not(#browser.win.maximized) .searchfield {
+	display: none !important;
+}
+
+/*
+.addressfield-mask:empty:before {
+	content
+}
+*/
+:not(#browser.win.maximized) .siteinfo-text {
+	display: none !important;
+}
+
+:not(#browser.win.maximized) #header {
+	transform: translateY(-75%);
+	/*  * To subvert Windows' window adjustment handling overshadowing header transform */
+	/* height: 15px; */
+}
+
+:not(#browser.win.maximized) #header:hover {
+	transform: translateY(-35%);
+}
+
+:not(#browser.win.maximized) #header:hover~#main .UrlBar {
+	transform: translateY(90%);
+	padding-top: 8px;
+}
+
+/*
+#browser.normal:not(.popup):not(.maximized) .window-buttongroup:not(:hover) {
+	transform: translateY(18%);
+}
+*/
+/* * Extra room to hover on tabz */
+/* #browser.normal:not(.popup):not(.maximized) #header:not(:hover) .tab:not(:hover).active { */
+#browser.normal:not(.popup):not(.maximized) #header .tab.active {
+	padding-bottom: 36px !important;
+	transition: 0.69s;
+}
+
+#browser.normal:not(.popup):not(.maximized) #header .window-buttongroup {
+	transform: translateY(5px);
+}
+
+/*
+#browser.win:not(.maximized):not(.popup) .newtab {
+	top: 13px !important;
+} */
+
+/* #browser:not(.maximized):not(.popup) :not(#header):not(:hover)>.tab.active:hover {
+	padding-bottom: 36px;
+	transition: 0.69s;
+} */
+
+/* :not(#browser.win.maximized) #tabs-Container {
+	transform: translateY(-15%);
+} */
+
+/* ? Removing for window z-index problems */
+/* :not(#browser.win.maximized) #tabs-container.top {
+	/* padding-top: calc(var(--padding)+6px); */
+/*
+	padding-top: 0px !important;
+}
+
+.win10.normal #header:hover #tabs-container.top {
+	padding-top: 0px !important;
+} */
+
+/* ! NEW 7-17-19 */
+.close:hover .tab {
+	background-color: unset !important;
+}
+
+/* :not(#browser.win.maximized) .window-buttongroup {
+	height: 27px;
+} */
+
+#header #titlebar .window-buttongroup button:not(.vivaldi) {
+	/* height: 27px !important; */
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+	/* box-shadow: none; */
+}
+
+/*
+#header:hover #titlebar .window-buttongroup {
+	/* height: 27px; */
+/* -webkit-filter: drop-shadow(-2px 1px 1px rgba(0, 0, 0, 0.7)); */
+/* box-shadow: none; */
+/*
+	transition: 0.69s;
+}
+*/
+#header #titlebar .window-buttongroup button {
+	/* height: 27px; */
+	fill: #323232fe;
+	background-color: var(--colorAccentBgAlpha);
+	/* background-color: var(--colorAccentBG); */
+	/* background: linear-gradient(var(--colorAccentBgAlpha), #0000); */
+	transition: 0.69s;
+}
+
+#browser #header #titlebar .window-buttongroup:hover>button:not(:hover) {
+	filter: brightness(50%) blur(0.69px);
+	transition: 1s;
+}
+
+/* * 6-25-20  * */
+#header #titlebar .window-buttongroup:not(:hover) button:not(.window-close) {
+	background: linear-gradient(var(--colorAccentBgAlpha), #0000);
+	transition: 0.69s;
+}
+
+.window-buttongroup {
+	/* -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)); */
+	/* box-shadow: -1px 7px 18px 4px var(--colorBgAlpha); */
+	transition: 0.69s;
+	/* pointer-events: all; */
+	z-index: 1;
+}
+
+.window-buttongroup:hover {
+	box-shadow: none;
+	/* -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7)); */
+	/* transition: 0.69s 2.69s; */
+}
+
+button.window-minimize {
+	border-bottom-left-radius: 10px !important;
+}
+
+.sync-and-trash-container {
+	pointer-events: all;
+	transition: 0.69s;
+}
+
+.sync-and-trash-container:hover {
+	fill: var(--colorAccentBGAlpha);
+	transition: 0.69s;
+}
+
+/* ! Popup Window Header Adjustmentz */
+/* .win.win10#browser.popup #titlebar {
+	background-color: transparent;
+	-webkit-mask-image: linear-gradient(0deg, #0000, #000);
+	height: 0px !important;
+} */
+
+#browser.popup #header {
+	/* position: sticky !important; */
+	background: none !important;
+	transform: translateY(-10px) !important;
+	padding-bottom: 32px !important;
+	transition: 0.69s;
+}
+
+#browser.popup #header:hover {
+	transform: translateY(0) !important;
+	transition: 0.69s;
+}
+
+/* ! MOAR */
+/* ? put space between #browser.normal and not declarationz - 3-28-20 */
+#browser.normal :not(.popup) #header:not(:hover) {
+	transform: translateY(-10px) !important;
+	-webkit-mask-image: linear-gradient(0deg, #0000, #000);
+	transition: 0.69s;
+	/* transition: all 1s linear; */
+}
+
+#browser.normal :not(.popup):not(.maximized) #header:not(:hover) {
+	transform: translateY(-120%) !important;
+	/* * Also 32px can wurk */
+	-webkit-mask-image: none;
+	transition: 0.69s;
+	/* transition: all 1s linear; */
+}
+
+/* ? ADJUST UI elements so they're not blocked by bookmark bar */
+.expanded.extensions-wrapper {
+	position: absolute;
+	top: 34px;
+	right: 8px;
+	background-color: var(--colorAccentBg);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	max-width: 100%;
+	/* overflow: visible !important; */
+	overflow: visible;
+	box-shadow: 5px 5px 18px 3px var(--colorBgAlpha);
+	filter: contrast(1.25) brightness(0.9);
+}
+
+.extension-popup.top {
+	margin-top: 33px;
+	left: unset !important;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#main>div.toolbar.UrlBar.toolbar-mainbar.toolbar-large>div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large>div.extension-popup.top {
+	margin-top: 0px !important;
+}
+
+.UrlBar:not(.search) .addressfield-popup-container .addressfield-popup {
+	margin-top: 38px;
+}
+
+.toolbar-medium .button-popup.button-popup-below,
+.toolbar-small .button-popup.button-popup-below {
+	top: 69px;
+}
+
+.toolbar-large .button-popup.button-popup-below {
+	top: 69px;
+}
+
+/*! --------------------------- panel Panel PANEL!!! -------------------------------*/
+
+/* .webviewbtn {
+	box-shadow: none !important; */
+/* background-color: #0000 !important; */
+/* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+} */
+
+/* .webviewbtn:hover {
+	animation: pulse;
+} */
+
+/* .webpanel-header {
+	z-index: 0;
+} */
+
+#panels-container:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	transition: all 420ms linear;
+}
+
+.panel-group:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	opacity: 0.98;
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
+	border-top-right-radius: 0;
+	/* importantz */
+	transition: all 690ms linear;
+	/* importantz */
+	/* ! Commenting out for testiez */
+	-webkit-mask-image: unset;
+	/* transition-delay: 6.9s !important; */
+}
+
+/* WHY?! Why NOT?! */
+button.preferences.panelbtn:hover svg {
+	animation-name: spindlebindle;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	padding-top: 0 !important;
+}
+
+/* ? 12-19-19 - Panel gradient bs - had important*/
+/* ! Adding NAWT popup cuz line underneatht htat look shit */
+/* ? 2-15-20 - commenting out for now to see what look lyke */
+/* #header:hover:not(.popup) ~ #main,
+#panel_switch,
+#switch:not(:hover),
+.panel-group:not(:hover) {
+	-webkit-mask-image: linear-gradient(180deg, #0000 0, #fff 10px);
+} */
+
+/* ! OLD - 11-29-19 - revert to if panel opacity doesn't transition more slowly
+#panels-container {
+	transition: all linear 0.269s !important;
+} */
+
+/* ? MAIN PANEL BACKGROUND */
+.panel-group:not(:hover):not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	opacity: 0.92;
+	/* filter: blur(0.42px); */
+	border-top-right-radius: 15px;
+	/* transition-delay: 6.9s;
+	transition: all 690ms linear; */
+	/* opacity: 0.69 !important;
+	filter: blur(0.42px) !important;
+	border-top-right-radius: 15px !important; */
+	transition-delay: 6.9s !important;
+	transition: 690ms !important;
+}
+
+#panels:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	fill: var(--colorAccentBG) !important;
+	animation: pulse;
+	z-index: 4;
+	transition: all 69ms linear;
+	/* border-top-right-radius: 10px !important; */
+	/* ? SEE PANEL-GROUP ABOVE FOR ROUND BORDER PROPERTY THINGY */
+}
+
+#panels button:not(.active):hover {
+	background-color: var(--colorAccentBg);
+}
+
+/* ! TRYING TO FIXI SIZE ADJUST THINGY - 8-6-20 */
+/*
+#panels-container.overlay.left:not(.switcher):not(.addwebpanel-wrapper):not(.addwebpanelcallout) #panels:not(:hover):not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	opacity: 0.69 !important;
+	transform: translateX(-40px);
+	transition: all 69ms linear;
+	transition-delay: 2.69s;
+}
+*/
+/* * 4-11-20 | adding :not(.alternate) because it affects tablez in system pagez */
+/* ? 8-6-20 | RIGHT/LEFT panel distinction  */
+
+#panels-container.right:hover {
+	transform: translateX(0px);
+	transition: all 69ms linear;
+	/* 	transition-delay: 2.69s; */
+}
+
+#panels-container.overlay.right:not(:hover),
+#panel_switch {
+	transform: translateX(0px);
+}
+
+/* ? Did not have NOT-HOVER - 8-6-20 */
+#panels-container.right,
+.panel-group:not(:hover) .fullwidth:not(:hover),
+.fullheight :not(.alternate) {
+	transform: translateX(40px);
+	transition: all 69ms linear;
+	transition-delay: 2.69s;
+}
+
+#panels-container.left:hover {
+	transform: translateX(0px);
+	transition: all 69ms linear;
+	/* 	transition-delay: 2.69s; */
+}
+
+#panels-container.overlay.left:not(:hover),
+#panel_switch {
+	transform: translateX(0px);
+}
+
+/* ? Did not have NOT-HOVER - 8-6-20 */
+#panels-container.left,
+.panel-group:not(:hover) .fullwidth:not(:hover),
+.fullheight :not(.alternate) {
+	transform: translateX(-40px);
+	transition: all 69ms linear;
+	transition-delay: 2.69s;
+}
+
+/* ? 8-6-20 | RIGHT/LEFT panel distinction  */
+/*
+#panels-container.right>.panel-group:not(:hover) .fullwidth:not(:hover),
+.fullheight:not(.alternate) {
+	transform: translateX(-40px);
+	transition: all 69ms linear;
+	transition-delay: 2.69s;
+}
+
+#panels-container.left>.panel-group:not(:hover) .fullwidth:not(:hover),
+.fullheight:not(.alternate) {
+	transform: translateX(0px);
+	transition: all 69ms linear;
+	transition-delay: 2.69s;
+}
+*/
+/* :not(.tab) :not(.tab-header) :not(.tabs)>.button-badge:not(:hover) { */
+/* * Above was kinda cool though, maybe switch?! */
+:not(.tab) :not(.tab-header)~ :not(.button-toolbar)>.button-badge {
+	/* left: 5%;
+	right: unset !important; */
+	justify-content: flex-end;
+	right: -2px;
+	border-radius: unset;
+	/* border: 2px ridge var(--colorAccentBg); */
+	min-width: 1px;
+	font-size: 8px;
+	font-weight: 500;
+	background-color: var(--colorAccentBgDarker);
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	padding: 2px;
+}
+
+.button-badge {
+	background-color: var(--colorAccentBorder);
+	border: 1px groove var(--colorAccentBorderDark);
+	color: var(--colorAccentBgInverse);
+}
+
+button.panelbtn:not(.active):hover {
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+
+button.panelbtn:not(.active):hover :not(.tabs).button-badge {
+	filter: contrast(0.69);
+	background-color: var(--colorAccentBgDarker);
+	border: 1px solid var(--colorAccentBgAlphaHeavy);
+}
+
+#panel_switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	/* width: 4px; */
+	/* width: 4px !important; */
+	fill: var(--colorAccentBG) !important;
+	/* * I think I was trying to fix the panel margin left issue with this but here is old ish just in case */
+	flex: 1 5 10px;
+	/* flex: 1 5 10px !important; */
+	/* flex: unset !important; */
+	z-index: 8;
+	opacity: 1;
+}
+
+/* Panel Shitz */
+/* :not(#panels-container):not(.switcher):not(#panels):not(.overlay):not(:hover)~#main,:not(#panels):hover:not(.panel-group):not(.switcher):not(.overlay) { */
+/*
+#panels-container:not(:hover)>:not(#panel_switch)~:not(:hover),
+#main>:not(*) {
+	/* 	margin-left: unset; */
+/* 	left: initial !important; */
+/*
+	margin-left: -38px;
+	/*     transform:translateX(-38px); */
+/*
+}
+
+#panels-container:hover,
+#main:not(#panels) {
+	/* 	margin-left: unset; */
+/* 	left: initial !important; */
+/*
+	margin-left: 0px;
+	/*     transform:translateX(1px); */
+/*
+}
+*/
+
+#panels-container.overlay.minimized {
+	position: absolute;
+}
+
+#panel_switch:hover {
+	background-color: var(--colorAccentBorderDark);
+	animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+	/* opacity: 0.69 !important; */
+}
+
+/* #panels-container.left.button */
+.switcher:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	/* width: 8px !important; */
+	width: 6.9px;
+	/* important was hurrr */
+	fill: var(--colorAccentBG) !important;
+	opacity: 0.69 !important;
+	z-index: 4;
+}
+
+.switcher:hover {
+	background-color: var(--colorAccentBG) !important;
+	animation: pulse;
+	opacity: 1 !important;
+}
+
+/* .panel-group {
+	padding-top: 27px;
+} */
+
+#panels-container.left:not(.addwebpanel-wrapper):not(.addwebpanelcallout) #panel_switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) #switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	z-index: 1;
+	/* border-top-style: inset;
+	border-top-width: thin; */
+}
+
+/** Hide panel behind bookmarkz */
+/*
+#switch #panel_switch {
+	z-index: 1;
+}
+*/
+/* ? Fixing weird panel button gap thing */
+#switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) #panel:not(.addwebpanel-wrapper):not(.addwebpanelcallout) #panel_switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	/* ! Seeing what flex shit doez - 3-16-20 */
+	/* flex: 0 0 40px; */
+	/*? THERE WAS AN ! HERE FOR SOME REASON WTF */
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
+}
+
+#panels-container.left:not(.addwebpanel-wrapper):not(.addwebpanelcallout) #switch:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	/* overflow-y: overlay;
+	overflow-x: hidden; */
+	border-top-style: inset;
+	border-top-width: thin;
+	border-top-color: var(--colorBgAlphaHeavy);
+	box-shadow: inset -1px 0 var(--colorBorder);
+}
+
+/* ! SCROLLBURRZ */
+
+/* UI scrollbars with highlight color */
+/* #browser:not(.mac) ::-webkit-scrollbar-thumb {
+	background-color: var(--colorHighlightBgDark) !important;
+} */
+
+/* ! 6-18-20
+#browser:not(.mac) *::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+*/
+
+#browser:not(.mac) *::-webkit-scrollbar-thumb:hover {
+	background-color: var(--colorAccentBg);
+}
+
+#browser:not(.mac) *::-webkit-scrollbar-thumb {
+	background-color: var(--colorAccentBgAlphaHeavy);
+}
+
+/* ! 6-18-20 */
+/* #browser:not(.mac) *::-webkit-scrollbar-thumb:hover { */
+/* #browser:not(.mac) *::-webkit-scrollbar-track { */
+/* background-color: var(--colorAccentBgDark); */
+/*
+	background: linear-gradient(0deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy));
+	animation-name: shepard;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+*/
+/* ! 6-18-20
+#browser:not(.mac) *::-webkit-scrollbar-thumb:active {
+	background-color: var(--colorAccentBgDarker);
+}
+*/
+#browser:not(.mac) *::-webkit-scrollbar {
+	/* display: none; */
+	width: 6.9px;
+}
+
+/*
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(0deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy));
+	animation-name: shepard;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+*/
+
+#browser:not(.mac) *::-webkit-scrollbar-thumb:active {
+	background: linear-gradient(0deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy));
+	/* animation-name: shepard; */
+	animation-name: glowyscroll;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite;
+}
+
+/*  ! 6-25-20 ADDED !IMPORTANT */
+@keyframes shepard {
+	0% {
+		background-position: bottom;
+	}
+
+	50% {
+		background-position: center;
+	}
+
+	100% {
+		background-position: top;
+	}
+}
+
+@keyframes glowyscroll {
+	0% {
+		box-shadow: 0px 0px 8px var(--colorAccentBG);
+		border: 2px solid var(--colorAccentBorder);
+	}
+
+	50% {
+		/* box-shadow: 1px 1px 14px rgba(81, 203, 238, 0.2); */
+		box-shadow: 1px 1px 14px var(--colorAccentBorderDark);
+		border: 2px solid var(--colorAccentBorderDark);
+	}
+
+	100% {
+		box-shadow: 0px 0px 8px var(--colorAccentBG);
+		border: 2px solid var(--colorAccentBorder);
+	}
+}
+
+/* Scrollbar for internal pages */
+/* --enable-features=OverlayScrollbar */
+/* --colorFgFaded: #686d6980; --colorBg: #26272c1A; */
+/*
+#browser ::-webkit-scrollbar {
+	background-color: transparent !important;
+	border: 0 !important;
+	/* width: 8px !important; */
+/* padding: 0 2px */
+/*
+}
+
+#browser ::-webkit-scrollbar-track {
+	background-color: transparent !important;
+	/* border: 0 !important; */
+/*
+	border-top: 1px solid var(--colorAccentBGDarker);
+	border-bottom: 1px solid var(--colorAccentBgDarker);
+	margin-top: 17px !important;
+}
+
+#browser ::-webkit-scrollbar-thumb {
+	background-color: var(--colorAccentBgAlpha) !important;
+	border: 0.69px solid var(--colorAccentBorderDark) !important;
+	opacity: 0.69 !important;
+	/* border-radius: 8px; */
+/*
+}
+
+#browser ::-webkit-scrollbar-thumb:hover {
+	background-color: var(--colorAccentBgDarker) !important;
+}
+
+#browser ::-webkit-scrollbar-thumb:active {
+	background-color: var(--colorAccentBg) !important;
+}
+
+#browser ::-webkit-scrollbar-button {
+	display: none !important
+}
+*/
+
+/* ? Fix for ABOVE panel scrollbar to hide but remain functional */
+
+/* ? FIND BAR ISH */
+.find-in-page.fip-nomatches input[type="search"] {
+	background: var(--colorAccentBg) !important;
+}
+
+/* Find in page on bottom */
+.find-in-page {
+	position: absolute;
+	bottom: -1px;
+	/* border-radius: var(--radius); */
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	max-width: fit-content;
+	margin: 0 auto;
+	/* padding-top: 8px !important; */
+	right: 0;
+	left: 0;
+	transition: all 0.69s linear;
+	z-index: 1;
+}
+
+.find-in-page:not(:focus-within):not(:hover) {
+	opacity: 0.69;
+	transition: all 0.69s linear;
+}
+
+/* gui improvement */
+
+.find-in-page .fip-input-container>.fip-results {
+	font-size: 80%;
+	align-items: center;
+}
+
+.find-in-page .fip-controls svg {
+	transform: rotate(90deg);
+}
+
+.find-in-page .fip-close svg {
+	fill: crimson;
+}
+
+/* compact off-focus find bar */
+
+.active.visible.webpageview .find-in-page:not(:focus-within):not(:hover) {
+	opacity: 0.5;
+	/* visibility: hidden; */
+}
+
+.active.visible.webpageview .find-in-page :is(#fip-input-text, .fip-results) {
+	visibility: visible;
+}
+
+/* nomatch alert */
+@keyframes jump {
+
+	40%,
+	60% {
+		transform: translateY(5px);
+	}
+
+	50% {
+		transform: translateY(-4px);
+	}
+}
+
+.find-in-page.fip-nomatches:focus-within {
+	animation: jump 0.2s steps(2) !important;
+}
+
+@keyframes nomatch {
+
+	10%,
+	50% {
+		background: lightpink;
+		color: maroon;
+	}
+}
+
+.find-in-page.fip-nomatches:focus-within #fip-input-text {
+	animation: nomatch 3s steps(6) infinite !important;
+}
+
+/* ! ExtensionToggle.js fullscreen ui fixes*/
+
+#browser.address-off #togglemod {
+	display: none;
+}
+
+#togglemod {
+	order: 1;
+}
+
+/* ! HIDE Secondary Extension Thing Button */
+#main>div.toolbar.UrlBar.toolbar-mainbar.toolbar-large>div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large>div.button-narrow.button-toolbar {
+	display: none !important;
+}
+
+#main>div.toolbar.UrlBar.toolbar-mainbar.toolbar-large>div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large {
+	/* padding-left: 10px !important;
+	padding-right: 10px !important; */
+	align-items: flex-start !important;
+}
+
+/* ! Hide Favicon if audio icon overlay exists */
+/* * Trying some fancy translations - 3-4-20 */
+/*
+#tabs-container .tab:not(.pinned):not(.tab-small).audio-on .favicon {
+	visibility: hidden !important;
+}
+*/
+
+/* ? Favicon adjustment in SiteInfo */
+#main>div.toolbar.UrlBar.toolbar-mainbar.toolbar-large>div.addressfield>button>div>img {
+	margin: 5px !important;
+}
+
+/* .searchfield .SearchEngineSelect-Icon {
+	margin-right: 0px !important;
+} */
+
+#main .searchfield nav.menu {
+	top: 64px;
+	transition-delay: 6900ms;
+}
+
+/* #main ~ .bookmark-bar:hover #tabs-container {
+	visibility: hidden !important;
+} */
+
+.SiteInfoButton-SecurityBadge {
+	width: unset;
+}
+
+/* Fix nonsense bar thing on left for some reason */
+/*
+#panels-container.overlay:not(.minimized).button.left:not(.addwebpanel-wrapper):not(.addwebpanelcallout)~#webview-container:not(.addwebpanel-wrapper):not(.addwebpanelcallout) {
+	margin-left: unset;
+}
+*/
+
+#panels-container.overlay:not(.minimized).button.left+div {
+	margin-left: unset;
+}

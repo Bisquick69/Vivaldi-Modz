@@ -1,0 +1,49 @@
+#panels-container {
+    position: fixed;
+    height: 100%;
+    max-width: 0vw;
+    opacity: 0;
+    z-index: 1;
+    transition: max-width .5s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity .2s linear .2s;
+}
+
+#panels-container:hover {
+    max-width: 99vw;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.toolbar-addressbar {
+    visibility: visible;
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .2s linear .2s, visibility 0s linear 1s, top .2s linear;
+}
+
+#header:hover~#main .toolbar-addressbar,
+.toolbar-addressbar:hover,
+.toolbar-addressbar:focus-within,
+.toolbar-addressbar:focus {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    opacity: .75;
+
+}
+
+.toolbar-addressbar:focus-within,
+.toolbar-addressbar:hover,
+.toolbar-addressbar:focus {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}

@@ -1,0 +1,37 @@
+.NotesManager { flex-direction: row !important; }
+
+.NotesManager-Toolbar, .NotesManager-Buttons { background-color: var(--colorBgDark) !important; }
+
+.NotesManager-Buttons { border-bottom: 1px solid var(--colorBgDarker); }
+
+.NotesManager-RenderMarkdownButton { display: none !important; }
+
+.NotesManager-Tree > .toolbar-default {
+  background-color: var(--colorBgDark);
+  padding-left: 5%;
+  margin-left: 0 !important;
+  height: 40px;
+}
+
+.NotesManager-Tree {
+  max-height: 100% !important;
+  flex-basis: 25vw !important;
+  border-right: 1px solid var(--colorBgDarker)
+}
+
+.NotesManager-Footer {
+  position: absolute;
+  grid-area: unset !important;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  bottom: 4px;
+  opacity: 1 !important;
+}
+
+.NotesManager-WordCount {
+  background-color: var(--colorHighlightBg);
+  color: var(--colorHighlightFg);
+  padding: 10px 25px;
+  border-radius: var(--radius);
+}

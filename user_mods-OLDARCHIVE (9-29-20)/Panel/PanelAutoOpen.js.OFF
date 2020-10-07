@@ -1,0 +1,108 @@
+function panelMouseOver (autoHide, delay_show, delay_change, delay_hide) {
+    var buttons = document.getElementById('switch').getElementsByTagName('button');
+    var show_token = null;
+    var activeButton = null;
+
+    /* Stop timer if mouse exits screen */
+    document.addEventListener("mouseout", function (e) {
+        clearTimeout(show_token);
+    });
+
+    /* Do auto-hide if applicable */
+    if (autoHide) {
+        var content = document.getElementById("webview-container").onmouseover = function () {
+            if (!document.getElementById("panels-container").getAttribute('class').includes("icons")) {
+                clearTimeout(show_token);
+                setTimeout(function () {
+                    if (activeButton && (activeButton.getAttribute('class').includes("active"))) {
+                        activeButton.click();
+                        activeButton = null;
+                    }
+                }, delay_hide);
+            }
+        };
+    }
+
+
+    function activeButtonIndex () {
+        for (let i = 0; i < buttons.length - 2; i++) {
+            if (buttons[i].getAttribute('class').includes('active')) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function setActive (index, doDelay) {
+        clearTimeout(show_token);
+        var delay = 0;
+        if (doDelay) {
+            delay = (activeButtonIndex() < 0) ? delay_show : delay_change;
+        }
+        show_token = setTimeout(function () {
+            var newButton = buttons[index];
+            if (!newButton.getAttribute('class').includes('active')) {
+                activeButton = newButton;
+                activeButton.click();
+                panel = index;
+            }
+        }, delay);
+    }
+
+    function setListeners () {
+        for (let index = 0; index < buttons.length - 2; index++) {
+            buttons[index].onmouseover = function () { setActive(index, true); };
+            buttons[index].onmouseout = function () { clearTimeout(show_token); };
+            buttons[index].ondragover = function () { setActive(index, false); };
+        }
+    }
+
+    setListeners();
+}
+
+setTimeout(function wait () {
+    var adr = document.querySelector(".toolbar-addressbar.toolbar");
+    if (adr != null) {
+        panelMouseOver(true, 100, 50, 250);
+    }
+    else {
+        setTimeout(wait, 300);
+    }
+}, 300);
+
+// var container = document.getElementById('panels-container');
+// var pSwitch = document.getElementById('panel_switch');
+
+// function showPanel () {
+//     if (pSwitch.title == 'Show Panel')
+//         pSwitch.click();
+// }
+
+// function hidePanel () {
+//     if (pSwitch.title == 'Hide Panel')
+//         pSwitch.click();
+// }
+
+// container.addEventListener('mouseenter', showPanel);
+// container.addEventListener('mouseleave', hidePanel);
+// Just add this somewhere inside the main setTimeout.
+// Also made the switch floating for smoother transitions instead of it pushing the content.
+
+//     #panels - container {
+//     width: 10px!important
+// }
+
+// #switch {
+//     position: absolute;
+//     width: 34px;
+//     top: 0px;
+//     bottom: 0px;
+// }
+
+// #panels - container.right #switch {
+//     right: 10px;
+// }
+
+// #panels - container.left #switch {
+//     left: 10px
+// }

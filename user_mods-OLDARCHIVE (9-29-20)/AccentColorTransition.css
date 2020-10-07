@@ -1,0 +1,51 @@
+/* ORIG transition time - 0.7s */
+
+/* Adds transition to the window accent */
+.color-behind-tabs-on #tabs-container {
+	transition: background-color 1.69s;
+}
+
+#tabs-container.top,
+#tabs-container.bottom {
+	transition: background-color 1.69s, border-color 1.69s;
+}
+
+/* Adds transition to window accent when tabs are not on the top/bottom */
+#browser:not(.tabs-top).address-top #header {
+	transition: background-color 1.69s;
+}
+
+/* Adds transition to the window accent when tabs are not on top/bottom and the address bar is hidden */
+#browser.color-behind-tabs-on.tabs-top,
+#browser+div.color-behind-tabs-on.tabs-top,
+#browser+div+div.color-behind-tabs-on.tabs-top,
+#browser.color-behind-tabs-off:not(.tabs-top),
+#browser+div.color-behind-tabs-off:not(.tabs-top),
+#browser+div+div.color-behind-tabs-off:not(.tabs-top) {
+	transition: background-color 1.69s;
+}
+
+/* Adds transition to the address bar accent */
+.toolbar,
+.color-behind-tabs-off .UrlBar,
+.color-behind-tabs-off .toolbar-mailbar {
+	transition: background 1.69s, background-color 1.69s;
+}
+
+/* Adds transition to the address bar accent when it is on the bottom or it is hidden */
+.color-behind-tabs-off #tabs-container.top,
+.color-behind-tabs-off #tabs-container.bottom {
+	transition: border-color 1.69s;
+}
+
+/* ORIG transition time - 0.4s */
+
+/* Adds transition to the active tab background color */
+#browser .tab-position .tab.active {
+	transition: background-color 1.69s, color 1.69s;
+}
+
+/* Adds transition to non-active tabs background color */
+.tab-position .tab.tab.tab:not(.active) {
+	transition: background-color 1.69s, color 1.69s;
+}

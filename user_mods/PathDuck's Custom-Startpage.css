@@ -1,0 +1,146 @@
+/* CUSTOM CSS for Vivaldi */
+
+/* Startup background colour */
+body {
+	background-color: #26272a !important;
+}
+
+/* Background image fit */
+.startpage {
+	background-size: 100% 100% !important;
+}
+
+/* Hide/limit Start Page navbar */
+.startpage .startpage-navigation {
+	min-height: 1em;
+	/*Reduced nav bar height
+	/* display: none; */
+}
+
+/* Position SD search field */
+.sdwrapper .iconmenu-container.searchfield {
+	margin: 1em auto 0;
+	opacity: 0.8;
+}
+
+/* Speed Dial Mods */
+.speeddial {
+	margin: 1em auto 0;
+}
+
+.speeddial .dial-columns {
+	width: 100% !important;
+	margin: 0 auto !important;
+	text-align: center;
+}
+
+.speeddial .dial {
+	position: initial !important;
+	transform: none !important;
+	display: inline-block !important;
+	margin: 0 5px 3em;
+}
+
+/* Dial look */
+.speeddial .dial .thumbnail-image {
+	/* background: rgba(25,25,25,0.4); */
+	height: 100%;
+	background: var(--colorBgAlphaHeavy);
+	transition: opacity 0.2s linear;
+	opacity: 0.8;
+	border-radius: 1em;
+	padding: 1em;
+}
+
+/* Dial opaque when hovering */
+.speeddial .dial .thumbnail-image:hover {
+	opacity: 1;
+}
+
+/* Thumbnail image fit container */
+.speeddial .dial .thumbnail-image img {
+	object-fit: contain;
+	object-position: center;
+}
+
+/* SD Title */
+.speeddial .dial .button-title {
+	background: var(--colorBgAlphaHeavy);
+}
+
+.speeddial .dial .editable-title-container {
+	position: relative;
+	top: 0.4em;
+}
+
+/* No outline on keyboard nav */
+.speeddial .dial:focus-within>.thumbnail-image:after {
+	box-shadow: none !important;
+}
+
+/* Unobstructive find-in-page mod */
+/*
+.find-in-page {
+	position:absolute;
+	top:1px;
+	border-radius: var(--radius);
+	max-width: fit-content;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	z-index:1;
+}
+*/
+
+/* Transparent find-in-page if not focused */
+.find-in-page:not(:focus-within):not(:hover) {
+	opacity: 0.8;
+}
+
+/* Use AccentBg color for no matches */
+.find-in-page.fip-nomatches input[type="search"] {
+	background: var(--colorAccentBg);
+}
+
+/* Make find-in-page results clearer */
+.find-in-page .fip-results {
+	opacity: 0.8 !important;
+}
+
+/* Remove EV certificate text */
+.siteinfo-text {
+	display: none;
+}
+
+/* Don't show blocked content warning */
+.button-addressfield.permission-popup.is-blocking {
+	display: none;
+}
+
+/* Extensions Popup */
+.HiddenToggleExtensionIcon {
+	background-color: unset !important;
+}
+
+/* Panels switch button */
+#switch>button.active {
+	/* background-color: var(--colorAccentBg); */
+	/* background: linear-gradient(90deg, #0000, var(--colorAccentBg) 95%); */
+	-webkit-mask-image: linear-gradient(90deg, #0000, var(--colorBgLightIntense) 50%);
+	color: var(--colorAccentBg);
+	fill: var(--colorAccentBg);
+	border-color: var(--colorAccentBorderDark);
+}
+
+#switch>button.active:hover {
+	/* 	animation: none; */
+	/* 	-webkit-mask-image: unset; */
+	/* 	-webkit-mask-image: linear-gradient(90deg, #0000, var(--colorBgLightIntense) 50%); */
+	background-color: var(--colorBgLightIntense) !important;
+	fill: var(--colorAccentBg) !important;
+}
+
+/* Hide Bookmarks Panel thumbnails */
+.addbookmark-cardwrapper .upper-half .preview {
+	display: none;
+}

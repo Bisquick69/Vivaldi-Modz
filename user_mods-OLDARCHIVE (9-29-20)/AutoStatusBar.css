@@ -1,0 +1,174 @@
+/* animationz */
+@keyframes glowysb {
+	0% {
+		opacity: 0.45;
+	}
+
+	50% {
+		opacity: 0.92;
+		/* background: linear-gradient(var(--colorAccentBg), var(--colorAccentBgAlphaHeavy)); */
+	}
+
+	100% {
+		opacity: 0.45;
+	}
+}
+
+/* automate status bar */
+.toolbar-statusbar {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9;
+	/* height: 26px; */
+	height: 18px;
+	/* width: auto; */
+	width: fit-content;
+	padding-top: 2px;
+	/* border-radius: var(--radius); */
+	border-radius: 10px;
+	/* border: none; */
+	border: 1px groove var(--colorAccentBgDark) !important;
+	transition: 0.69s;
+	/* ! Added to try and prevent  undesired popup (11-7-19) */
+	transition-delay: 0.69s;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	font-size: 8px !important;
+	/* 	opacity: 0.69; */
+}
+
+.toolbar-statusbar:not(.toolbar-medium):not(:focus-within):not(:hover) {
+	height: 12px;
+	background: transparent !important;
+	transition: 0.15s 0.4s !important;
+}
+
+.toolbar-statusbar:not(.toolbar-medium):not(:focus-within):not(:hover) :not(.status-info) {
+	opacity: 0;
+	transition: opacity 0s 0.55s !important;
+}
+
+/*? TXT size */
+#vivaldi-tooltip {
+	font-size: 8px !important;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	text-align: center;
+	/* -webkit-mask-image: -webkit-linear-gradient(180deg, #0000 0, #fff 12px); */
+	/* -webkit-mask-position: top right; */
+}
+
+.StatusInfo--Visible {
+	visibility: visible;
+	/* background: var(--colorAccentBgFaded) !important; */
+	/* animation-name: pulse;
+	animation-duration: 1.69s;
+	animation-iteration-count: infinite; */
+	/* border: 1px solid var(--colorAccentBgDark) !important; */
+	/* border-radius: 10px !important; */
+	/* opacity: 0.69; */
+	/* animation-name: glowy; */
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	font-size: 10px !important;
+	transition: 690ms;
+}
+
+.StatusInfo {
+	/* position: fixed; */
+	/* left: 0; */
+	/* bottom: 1px; */
+	/* padding: 1.5px 8px 2px !important; */
+	/* border-radius: 0 var(--radius) 0 0; */
+	/* background: var(--colorBgDark); */
+	/* border: 1px solid var(--colorAccentBgDark) !important; */
+	/* border-radius: 10px !important; */
+	transition: 690ms;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+}
+
+#webview-container~.StatusInfo .StatusInfo-Content {
+	border: 1px solid var(--colorAccentBorder);
+	/* opacity: 0.69; */
+	border-radius: 8px !important;
+	animation-name: glowysb;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	transition: opacity 690ms;
+}
+
+/* ! PANEL STATUSBAR/TOOLBAR */
+
+#panels>div.panel-group>div>div>div.panel.webpanel.visible>footer>div.toolbar.toolbar-medium.toolbar-statusbar {
+	position: fixed;
+	bottom: -2px !important;
+	right: 6px !important;
+	z-index: 9;
+	/* height: 26px; */
+	height: 18px;
+	/* width: auto; */
+	width: fit-content;
+	padding: 1px !important;
+	/* border-radius: var(--radius); */
+	/* 	border-bottom-right-radius: 0px !important; */
+	/* 	border-bottom-left-radius: 0px !important; */
+	border-top-right-radius: 0;
+	border-right: 0px !important;
+	border: 1px 0 0 1px groove var(--colorAccentBgDark);
+	transition: 0.69s;
+	/* ! Added to try and prevent  undesired popup (11-7-19) */
+	transition-delay: 0.25s;
+	font-family: 'Bahnschrift',
+		system-ui,
+		sans-serif !important;
+	font-size: 8px;
+	opacity: 0.25;
+	transform: translateX(0);
+}
+
+
+#panels>div.panel-group>div>div>div.panel.webpanel.visible>footer>div.toolbar.toolbar-medium.toolbar-statusbar:not(:hover) {
+	transform: translateX(169px);
+	/*     margin-left: 23.5% !important; */
+	padding-left: 25px !important;
+	padding-bottom: 25px !important;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	transition: 0.69s;
+	transition-delay: 1.69s;
+	/* 	background: linear-gradient(0deg, var(--colorAccentBgDarker), var(--colorAccentBorder)); */
+	/* 	opacity: 0; */
+}
+
+#panels>div.panel-group>div>div>div.panel.webpanel.visible>footer>div>.mod-panel-action>button:hover {
+	animation-name: pulsey;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-direction: alternate;
+	animation-duration: 2.69s;
+}
+
+.toolbar.toolbar-medium.toolbar-statusbar:hover {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	opacity: 1 !important;
+}
+
+.zoom-out.button-toolbar.mod-panel-action {
+	border-top-left-radius: 8px;
+}
+
+/*
+.panel-action-search-text.button-toolbar.mod-panel-action {
+	border-top-right-radius: 8px;
+}
+*/

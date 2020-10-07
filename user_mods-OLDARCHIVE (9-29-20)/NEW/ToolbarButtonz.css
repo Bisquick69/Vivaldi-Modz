@@ -1,0 +1,21 @@
+.toolbar-default .button-toolbar>button {
+    background-image: linear-gradient(var(--colorBgLighter), var(--colorBgLight)) !important;
+}
+
+.toolbar-default .button-toolbar>button.button-pressed {
+    background-image: linear-gradient(var(--colorHighlightBg), var(--colorHighlightBgDark)) !important;
+}
+
+.toolbar-default .button-toolbar>button.button-pressed:active {
+    background-image: linear-gradient(var(--colorBgDark), var(--colorBgDark)) !important;
+}
+
+.toolbar-default .button-toolbar>button:hover {
+    background-color: var(--colorBgDark) !important;
+    fill: var(--colorHighlightBg) !important;
+}
+
+.toolbar-default .button-toolbar>button.button-pressed {
+    fill: var(--colorHighlightFg) !important;
+    color: var(--colorHighlightFg);
+}

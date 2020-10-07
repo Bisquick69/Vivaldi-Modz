@@ -1,0 +1,9 @@
+/* Theme based background colour (overwrites colour in the settings panel) */
+.startpage {
+    background-color: var(--colorBgDark) !important;
+}
+
+/* Adds a theme based gradient overlay */
+.startpage .startpage-content {
+    background-image: linear-gradient(to bottom right, var(--colorFgAlpha), var(--colorHighlightBgAlpha)) !important;
+}

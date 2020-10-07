@@ -1,0 +1,90 @@
+/* DATE */
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder) label:nth-of-type(3) span {
+    content: "5555";
+    transition: 0.69s;
+}
+
+
+/* ATTATCHMENT */
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder) label:nth-of-type(4) {
+    /* 	width:32px; */
+    /* 	margin-right:-2px !important; */
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    transition: 0.69s;
+}
+
+/* ADDRESS */
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder):not(:hover) label:nth-of-type(2) {
+    /* 	width: 0% !important; */
+    position: absolute;
+    /*     margin-left:-100% !important; */
+    visibility: collapse;
+    display: none;
+    /*     transition:0.69s; */
+}
+
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder):hover label:nth-of-type(2) {
+    /* 	width: 50px !important; */
+    visibility: visible;
+    display: block;
+    /*     width:120%; */
+    width: fit-content;
+    background: linear-gradient(to right, var(--colorAccentBg) 95%, transparent);
+    animation: scrollinspan 5s infinite ease-in-out both;
+    filter: opacity(0.69);
+    /*     transition:0.69s; */
+    /*     margin-left:-200px; */
+}
+
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder):hover label:nth-of-type(2) span {
+    color: white;
+    width: fit-content;
+    text-shadow: 2px 0.69px 2.69px black !important;
+    animation: scrollinspan 5s infinite ease-in-out both;
+    transition: 0.69s;
+}
+
+@keyframes scrollinspan {
+    0% {
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: -15%;
+    }
+
+    69% {
+        opacity: 0.25;
+        filter: opacity(0.2);
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+
+/* CONTENT */
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder):hover:not(.separator) label:nth-of-type(1) {
+    /* 	width: 50px !important; */
+    visibility: collapse;
+    display: none;
+    transition: 0.69s;
+}
+
+.NotesManager .vivaldi-tree .tree-row:not([data-separator]):not(.folder):not(:hover) label:nth-of-type(1) *:not(svg) {
+    /*   display:flex; */
+    /*   flex: 1 1 0; */
+    /*   align-items: center; */
+    /*   padding: 0 0 0 9px; */
+    /*   line-height: 24px; */
+    /*   min-height: 24px; */
+    padding-right: 0px;
+    margin: 0;
+    white-space: none;
+    overflow: auto;
+    text-overflow: ellipsis;
+    transition: 0.69s;
+    width: max-content;
+}

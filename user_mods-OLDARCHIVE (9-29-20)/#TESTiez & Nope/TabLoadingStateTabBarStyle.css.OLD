@@ -1,0 +1,20 @@
+@keyframes loading-animation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#browser.active-tab-loading .tab.active .favicon {
+    background-image: url(./images/sync-alt-solid-gray.svg) !important;
+    background-position: center center;
+    background-size: 78%;
+    animation: loading-animation 1.25s infinite linear;
+}
+
+#browser.active-tab-loading .tab.active .favicon svg {
+    display: none;
+}

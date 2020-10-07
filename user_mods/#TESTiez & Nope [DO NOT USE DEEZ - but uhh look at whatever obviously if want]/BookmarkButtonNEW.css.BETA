@@ -1,0 +1,10 @@
+#addbookmarks {
+	background-color: var(--colorBg) !important;
+	border-width: 0 !important;
+	border-radius: 0px;
+}
+
+#addbookmarks:hover {
+	background-color: #ececec !important;
+	border-width: 0 !important;
+}

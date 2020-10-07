@@ -1,0 +1,36 @@
+/* list extensions toolbar icons in vertical */
+.toolbar-extensions {
+    flex-direction: column;
+}
+
+/* make extension popup visible on left pane */
+#switch {
+    contain: size;
+}
+
+/* position extension popup */
+.extension-popup {
+    left: 34px !important;
+    top: 15% !important;
+    box-shadow: 0px 0px 10px 2px #00000075;
+}
+
+/* remove top arrow from extension popup */
+.extension-popup:before, .extension-popup:after {
+    display: none !important;
+}
+
+/* put address bar on bottom and hide */
+.toolbar-addressbar {
+    order: 2;
+    transition: transform .2s;
+    position: fixed;
+    bottom: 22px;
+    width: 100%;
+    transform: translate3d(0, 50px, 0);
+}
+
+/* reveal on hover */
+.toolbar-addressbar.show-addressbar, .toolbar-addressbar:hover {
+transform: translate3d(0, 0, 0);
+}

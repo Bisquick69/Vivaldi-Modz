@@ -1,0 +1,53 @@
+/* Header hover but not on tabstrip, lower tabs */
+#browser.tabs-top #header:hover .tab-strip:not(:hover) .tab:not(.active) {
+	transform: translateY(0);
+	transition: transform 0.69s ease-in-out !important;
+	color: var(--colorAccentFg);
+	background: linear-gradient(180deg, var(--colorAccentBg), var(--colorAccentBgAlphaHeavy)) !important;
+}
+
+/* ? Testiez for delay on windowbuttonz */
+#browser.tabs-top #header:hover .tab-strip:not(:hover) .window-buttongroup:not(:hover) {
+	transition-delay: 1.69s;
+}
+
+#browser.tabs-top .tab:not(.active):hover {
+	transform: translateY(0);
+	transition: transform 0.69ms !important;
+}
+
+#browser.tabs-top .tab:not(.active) {
+	transform: translateY(-4px);
+	transition: transform 0.69s ease-in-out !important;
+}
+
+#browser.tabs-left .tab:not(.active):hover,
+#browser.tabs-right .tab:not(.active):hover {
+	transform: translateX(0);
+	transition: transform 0.69ms !important;
+}
+
+#browser.tabs-left .tab:not(.active) {
+	transform: translateX(-2px);
+	transition: transform 0.69s ease-in-out !important;
+}
+
+#browser.tabs-right .tab:not(.active) {
+	transform: translateX(4px);
+	transition: transform 0.69s ease-in-out !important;
+}
+
+/* ! PINNED STUFF */
+
+/*
+.tab.pinned {
+	transform: translateY(0) !important;
+	background: var(--colorAccentBgDarker) !important;
+	/* width: fit-content !important; */
+/*
+}
+
+.tab.pinned:hover {
+	width: fit-content !important;
+}
+*/

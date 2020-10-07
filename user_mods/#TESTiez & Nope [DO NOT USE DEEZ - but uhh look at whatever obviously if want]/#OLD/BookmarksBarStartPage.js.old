@@ -1,0 +1,53 @@
+/**
+ * Author: Leonardo Domingues
+ */
+
+setTimeout(function wait () {
+    var adr = document.querySelector(".toolbar-addressbar.toolbar");
+    if (adr != null) {
+        const vivaldi = window.chrome;
+
+        var bar = document.getElementsByClassName('bookmark-bar')[0];
+        // var bar2 = document.getElementsByClassName('toolbar:hover ~ .bookmark-bar')[0];
+        // var adb = document.getElementsByClassName('toolbar-addressbar')[0];
+        // var adb = document.getElementsByClassName('toolbar-addressbar:not(:focus-within):not(:hover)')[0];
+
+        function change_display () {
+            var tab = document.querySelector('.active.webpageview');
+
+            if (tab.classList.contains('internal')) {
+                // bar.style.display = "flex";
+                // bar.style.transform = "unset";
+                // bar.style.marginTop = "69px";
+                bar.style.display = "unset";
+
+                // adb.style.transform = "translateY(50px)";
+                // adb.style.opacity = "1 !important";
+                // adb.style.top = "69px !important";
+
+            } else {
+                bar.style.display = "flex";
+                // bar.style.display = "flex";
+                // bar.style.marginTop = "unset";
+                // bar2.style.transform = 'translateY(145%)';
+                // bar.style.top = "unset";
+
+                // adb.style.transform = "unset";
+                // adb.style.transform = "translateY(-78%)";
+
+                // adb.style.opacity = "0.01 !important";
+                // adb.style.top = "24px !important";
+
+            }
+        }
+
+        vivaldi.tabs.onCreated.addListener(e => change_display());
+
+        vivaldi.tabs.onUpdated.addListener(e => change_display());
+
+        vivaldi.tabs.onActivated.addListener(e => change_display());
+    }
+    else {
+        setTimeout(wait, 300);
+    }
+}, 300);
